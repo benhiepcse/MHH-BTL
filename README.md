@@ -31,3 +31,4 @@ Declare any AI-tool use in this README. Full rules, rubric (Appendix B), and the
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
   - **In CNF**: Requires breaking into *At-least-k* and *At-most-k*. The naive binomial encoding for *At-most-k* generates $\binom{n}{k+1}$ clauses, leading to clause explosion on large instances.
 - **At-most-k Constraint**: $\sum_{i} x_{ij} \le k$.
+
