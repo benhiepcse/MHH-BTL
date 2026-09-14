@@ -33,7 +33,6 @@
   * **At most $r(j)$ invigilators**: $$\forall j \in J, \forall i_1, i_2, \dots, i_{r(j)+1} \in I \left( \left( \bigwedge_{m=1}^{r(j)+1} Assign(i_m, j) \right) \rightarrow \left( \bigvee_{1 \le a < b \le {r(j)+1}} i_a = i_b \right) \right)$$  
     * Meaning: If you pick any $r(j) + 1$ invigilators who are assigned to shift $j$, at least two of them must actually be the same person.
 ## Formal Syntax Rules  
-
 ### Operator and Expression Grammar  
 - **Binary Operators** ($\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, $=$, $!=$):  
   * Must be preceded by a term/predicate closing or closing parenthesis ')'.  
