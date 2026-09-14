@@ -5,9 +5,9 @@
 - $J$: set of shifts
 - $C$: set of campuses
 ### Domains
-- $\{i_1, i_2, \dots, i_n\} \in I$: invigilators parameters  
-- $\{j_1, j_2, \dots, j_m\} \in J$: shifts parameters  
-- $\{c_1, c_2, \dots, c_p\} \in C$: campuses parameters  
+- $\\{i_1, i_2, \dots, i_n\\} \in I$: invigilators parameters  
+- $\\{j_1, j_2, \dots, j_m\\} \in J$: shifts parameters  
+- $\\{c_1, c_2, \dots, c_p\\} \in C$: campuses parameters  
 - $r(j)$: the required number of invigilators for shift $j$  
 ## Predicates
 - **Assign(i, j)** - $i \in I$, $j \in J$. $Assign(i, j) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is assigned at shift $j$, and $\text{False}$ if invigilator $i$ isn't assigned at shift $j$ 
