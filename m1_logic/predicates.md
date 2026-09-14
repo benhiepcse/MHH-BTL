@@ -15,7 +15,7 @@
 ## Hard regulations  
 - **No double-booking**: $\forall i \in I, \forall j, k \in J ((j \neq k) \land Assign(i, j) \land Overlap(j, k) \rightarrow \neg Assign(i, k))$
   * Meaning: If an invigilator $i$ is assigned to shift $j$, shift $j$ and shift $k$ are overlapped to each other (shift $j$ and shift $k$ are different from each other), then invigilator $i$ can't be assigned to shift $k$
-- **Availability**: $\forall i \in I, \forall j \in J Busy(i, j) \rightarrow \neg Assign(i, j)$
+- **Availability**: $\forall i \in I, \forall j \in J (Busy(i, j) \rightarrow \neg Assign(i, j))$
   * Meaning: If an invigilator $i$ is busy at shift $j$, then invigilator $i$ can't be assigned at shift $j$
 - **Capacity**: I separate "Exact Capacity of $k$" into two parts: "At least $k$ invigilators" and "At most $k$ invigilators"  
   * **At least $k$ invigilators**: $$\forall j \in J, \exists i_1, i_2, \dots, i_k \in I \left( \left( \bigwedge_{1 \le a < b \le k} i_a \neq i_b \right) \land \left( \bigwedge_{m=1}^{k} Assign(i_m, j) \right) \right)$$  
