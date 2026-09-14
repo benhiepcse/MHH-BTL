@@ -94,12 +94,10 @@ class PredicateValidator:
         return tokens, errors
 
     def _validate_operator_grammar(self, tokens):
-        """Enforces operator sequence state machine rules."""
         errors = []
         n = len(tokens)
 
         for i, (kind, val, pos) in enumerate(tokens):
-            # 1. Binary Operator Placement Checks
             if val in self.BINARY_OPERATORS:
                 # Must be preceded by a term, predicate closing, or right bracket
                 if i == 0:
@@ -117,7 +115,6 @@ class PredicateValidator:
                     if next_kind in ('RPAREN', 'COMMA', 'IN') or next_val in self.BINARY_OPERATORS:
                         errors.append(f"Grammar Error at position {pos}: Operator '{val}' missing valid right operand")
 
-            # 2. Unary Operator Placement Checks
             elif val in self.UNARY_OPERATORS:
                 if i == n - 1:
                     errors.append(f"Grammar Error at position {pos}: Dangling unary operator '{val}'")
@@ -126,13 +123,11 @@ class PredicateValidator:
                     if next_val in self.BINARY_OPERATORS or next_kind in ('RPAREN', 'COMMA'):
                         errors.append(f"Grammar Error at position {pos}: Unary operator '{val}' followed by invalid token '{next_val}'")
 
-            # 3. Consecutive Terms / Missing Connective Check
             elif kind == 'RPAREN' and i + 1 < n:
                 next_kind, next_val, next_pos = tokens[i + 1]
                 if next_kind in ('WORD', 'LPAREN', 'QUANTIFIER'):
                     errors.append(f"Grammar Error at position {next_pos}: Missing connective operator before '{next_val}'")
 
-            # 4. Empty Parentheses Check
             elif kind == 'LPAREN' and i + 1 < n:
                 if tokens[i + 1][0] == 'RPAREN':
                     errors.append(f"Syntax Error at position {pos}: Empty expression '()'")
@@ -140,18 +135,15 @@ class PredicateValidator:
         return errors
 
     def validate(self, formula):
-        """Performs full syntactic, structural, domain, and arity validation."""
         print(f"Testing: {formula}")
         
         tokens, lex_errors = self._tokenize(formula)
         errors = list(lex_errors)
         
         if not lex_errors:
-            # Step 1: Grammar & Operator sequence validation
             grammar_errors = self._validate_operator_grammar(tokens)
             errors.extend(grammar_errors)
 
-            # Step 2: Semantic, Arity, and Domain validation
             quantified_vars = set()
             i = 0
             n = len(tokens)
@@ -159,7 +151,6 @@ class PredicateValidator:
             while i < n:
                 token_type, value, pos = tokens[i]
                 
-                # Check Quantifier Scope & Variables
                 if token_type == 'QUANTIFIER':
                     i += 1
                     q_vars = []
@@ -174,7 +165,6 @@ class PredicateValidator:
                             quantified_vars.add(t_val)
                             i += 1
 
-                            # Handle explicit domain notation (e.g., \forall j \in J)
                             if i < n and tokens[i][0] in ('COMMA', 'IN'):
                                 if tokens[i][0] == 'IN':
                                     i += 1
@@ -194,7 +184,6 @@ class PredicateValidator:
                         errors.append(f"Syntax Error at position {pos}: Quantifier '{value}' missing target variable(s)")
                     continue
 
-                # Check Predicates
                 elif token_type == 'WORD':
                     if i + 1 < n and tokens[i+1][0] == 'LPAREN':
                         pred_name = value
@@ -272,13 +261,13 @@ def validate_formula(formula, check_unbound_vars=False):
 
 if __name__ == "__main__":
     test_formulas = [
-        "forall j forall k (Overlap(j, k) AND Assign(i, j) -> NOT Assign(i, k))", # Valid
-        "Assign(i, j) -> -> Busy(i, j)",                                         # Error: Consecutive operators
-        "Assign(i, j) ->",                                                        # Error: Dangling operator
-        "Assign(i, j) Busy(i, j)",                                                # Error: Missing connective
-        "forall x (Assign(i, j))",                                                # Error: Undefined quantified var
-        "forall j in I (Assign(i, j))",                                           # Error: Domain mismatch (j is J, not I)
-        "()"                                                                      # Error: Empty expression
+        "forall j forall k (Overlap(j, k) AND Assign(i, j) -> NOT Assign(i, k))",
+        "Assign(i, j) -> -> Busy(i, j)",                                   
+        "Assign(i, j) ->",                                                
+        "Assign(i, j) Busy(i, j)",                                            
+        "forall x (Assign(i, j))",                                          
+        "forall j in I (Assign(i, j))",                                         
+        "()"                                                                 
     ]
 
     for f in test_formulas:
