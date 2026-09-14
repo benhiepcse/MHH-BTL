@@ -7,6 +7,9 @@
 - **Assign(i, j)** - $i \in I$, $j \in J$. $Assign(i, j) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is assigned at shift $j$, and $\text{False}$ if invigilator $i$ isn't assigned at shift $j$ 
 - **Busy(i, j)** - parameters: $i \in I$, $j \in J$. $Busy(i, j) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is busy at shift $j$, and $\text{False}$ if invigilator $i$ is's busy at shift $j$. 
 - **Overlap(j, k)** - parameters: $j \in J$, $k \in J$. $Overlap(j, k) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ and shift $k$ are overlapped to each other, and $\text{False}$ if shift $j$ and shift $k$ aren't overlapped to each other.
+  * Overlap is symmetric and irreflexive
+    * Symmetric: $ \forall j, k \in J (Overlap(j, k) \leftrightarrow Overlap(k, j)) $
+    * Irreflexive: $ \forall j \in J (\neg Overlap(j, j))$ 
 - **AtCampus(j, c)** - parameters: $j \in J$, $c \in C$. $AtCampus(j, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ is occured at campus $c$, and $\text{False}$ if shift $j$ isn't occured at campus $c$.
 - **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
 ## Hard regulations  
