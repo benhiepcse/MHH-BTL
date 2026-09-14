@@ -35,12 +35,12 @@
 ## Formal Syntax Rules  
 
 ### Operator and Expression Grammar  
-- **Binary Operators** ($\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, '=', '!='):  
+- **Binary Operators** ($\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, $=$, $!=$):  
   * Must be preceded by a term/predicate closing or closing parenthesis ')'.  
   * Must be followed by a term/predicate opening, opening parenthesis '(', or a unary operator.
-- **Unary Operators** ('NOT', '$\neg$'):
+- **Unary Operators** ('NOT', $\neg$):
   * Cannot be followed immediately by a binary operator or a closing parenthesis.
 - **Quantifiers** ($\forall$, $\exists$):
   * Must be followed by a valid domain variable.
-  * May include an optimal domain constraint ('$\in I$').  
+  * May include an optimal domain constraint ($\in I$).  
 
