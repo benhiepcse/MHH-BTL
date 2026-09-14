@@ -3,7 +3,7 @@
 ### Sets
 - $I$: set of invigilators, who are responsible for supervising the exam at the specific shifts
 - $J$: set of shifts
-- $C$: $\\{Cơ \, sở \, 1, Cơ \, sở \, 2\\}$
+- $C$: $\\{Cơ \\, sở \\, 1, Cơ \\, sở \\, 2\\}$
 ### Domains
 - $\\{i_1, i_2, \dots, i_n\\} \in I$: invigilators parameters  
 - $\\{j_1, j_2, \dots, j_m\\} \in J$: shifts parameters  
