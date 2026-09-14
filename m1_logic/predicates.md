@@ -9,7 +9,7 @@
 - **Overlap(j, k)** - parameters: $j \in J$, $k \in J$. $Overlap(j, k) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ and shift $k$ are overlapped to each other, and $\text{False}$ if shift $j$ and shift $k$ aren't overlapped to each other.
 - **AtCampus(j, c)** - parameters: $j \in J$, $c \in C$. $AtCampus(j, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ is occured at campus $c$, and $\text{False}$ if shift $j$ isn't occured at campus $c$.
 - **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
-## Hard regulations $ Softer wishes
+## Hard regulations $ Softer wishes  
 ### Hard regulations
 - **No double-booking**: $\forall i \in I, \forall j, k \in J ((j \neq k) \land Assign(i, j) \land Overlap(j, k) \rightarrow \neg Assign(i, k))$
   * Meaning: If an invigilator $i$ is assigned to shift $j$, shift $j$ and shift $k$ are overlapped to each other, then invigilator $i$ can't be assigned to shift $k$
