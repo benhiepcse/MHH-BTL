@@ -1,5 +1,5 @@
 # Predicate Specification
-## Sets $ Domains
+## Sets & Domains
 ### Sets
 - $I$: set of invigilators, who are responsible for supervising the exam at the specific shifts
 - $J$: set of shifts
