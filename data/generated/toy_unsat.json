@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "instance_name": "toy_instance_unsat",
+  "format": "iap",
+  "invigilators": [
+    "CB1",
+    "CB2",
+    "CB3"
+  ],
+  "shifts": [
+    {
+      "id": "Morning",
+      "capacity": 2
+    },
+    {
+      "id": "Afternoon",
+      "capacity": 2
+    }
+  ],
+  "busy": [
+    {
+      "invigilator": "CB1",
+      "shift": "Morning"
+    },
+    {
+      "invigilator": "CB2",
+      "shift": "Morning"
+    }
+  ],
+  "overlaps": [],
+  "eligibility": []
+}
