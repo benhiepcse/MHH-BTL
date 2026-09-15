@@ -1,4 +1,36 @@
 #!/usr/bin/env python3
+"""
+predicate_validator.py
+
+Validate common formatting/syntax errors in mathematical predicates written
+inside a Markdown file.
+
+The checks are based on the "Formal Syntax Rules" section of predicate.md:
+
+1. Binary operators:
+       AND, OR, implication, equivalence, equality, inequality
+   must have a valid expression on both sides.
+
+2. Unary operators:
+       NOT / negation
+   cannot be followed immediately by another binary operator or ')'.
+
+3. Quantifiers:
+       forall / exists
+   must be followed by one or more valid domain variables, optionally followed
+   by a domain constraint such as "in I".
+
+4. Parentheses/braces:
+   (), [] and {} must be balanced.
+
+5. Predicate calls:
+   A predicate/function call such as Assign(i, j) must have balanced
+   parentheses and non-empty arguments.
+
+The validator intentionally performs syntax/format checks only. It does not
+attempt to prove that a formula is logically correct.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -26,7 +58,7 @@ class Error:
 # ---------------------------------------------------------------------------
 # Token definitions
 # ---------------------------------------------------------------------------
-
+.
 FORMAT_COMMANDS = {
     r"\left", r"\right", r"\displaystyle", r"\textstyle",
     r"\big", r"\Big", r"\bigg", r"\Bigg",
@@ -92,7 +124,6 @@ def extract_math(text: str) -> list[tuple[int, int, str]]:
     """
     results: list[tuple[int, int, str]] = []
 
-    # Display math: $$ ... $$, possibly multiline.
     display_pattern = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
 
     inline_pattern = re.compile(r"(?<!\$)\$(?!\$)(.*?)(?<!\$)\$(?!\$)", re.DOTALL)
@@ -211,6 +242,11 @@ def tokenize(formula: str) -> list[tuple[str, str, int]]:
             i += 1
             continue
 
+        if ch == "|":
+            tokens.append(("CARDINALITY_BAR", ch, i))
+            i += 1
+            continue
+
         if ch in "()[]{}":
             if i > 0 and formula[i - 1] == "\\\\":
                 tokens.append(("ATOM", ch, i))
@@ -292,7 +328,7 @@ def is_operand_end(kind: str) -> bool:
     """
     return kind in {
         "ATOM", ")",
-        "COMMAND",
+        "COMMAND", "CARDINALITY_BAR",
     }
 
 
@@ -631,6 +667,17 @@ def validate_formula(formula: str, line: int) -> list[Error]:
     errors.extend(check_quantifiers(tokens, line))
     errors.extend(check_operand_adjacency(tokens, line))
     errors.extend(check_predicate_calls(normalized, tokens, line))
+
+    bar_positions = [pos for kind, value, pos in tokens if kind == "CARDINALITY_BAR"]
+    if len(bar_positions) % 2 != 0:
+        errors.append(
+            Error(
+                line,
+                bar_positions[-1] + 1,
+                "unmatched cardinality bar '|'",
+            )
+        )
+
     return errors
 
 
