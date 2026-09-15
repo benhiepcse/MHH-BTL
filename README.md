@@ -26,3 +26,9 @@ Push a tagged commit `week-01 … week-14` with a `CHECKPOINTS.md` entry; tag mi
 `python run_all.py --seed $(cat data/seed.txt)` must reproduce every number in your report from a clean clone.
 
 Declare any AI-tool use in this README. Full rules, rubric (Appendix B), and the red **CRITICAL** items are in the brief.
+#### Cardinality / Counting Rules (Req 1.3)
+- **Exact Capacity Constraint**: Shift $j$ requires exactly $k$ invigilators.
+  - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
+  - **In CNF**: Requires breaking into *At-least-k* and *At-most-k*. The naive binomial encoding for *At-most-k* generates $\binom{n}{k+1}$ clauses, leading to clause explosion on large instances.
+- **At-most-k Constraint**: $\sum_{i} x_{ij} \le k$.
+
