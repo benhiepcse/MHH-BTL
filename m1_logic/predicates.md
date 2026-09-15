@@ -32,7 +32,7 @@
   * Meaning: If an invigilator $i$ is busy at shift $j$, then invigilator $i$ can't be assigned at shift $j$
 - **Capacity**:
   * First-order formula:
-       $\forall j \in J |(i \in I : Assign(i, j)| = r(j)$.
+       $\forall j \in J |{i \in I : Assign(i, j)}| = r(j)$.
   * Meaning: For every shift $j$, the number of invigilators $i$ assigned to that shift is exactly $r(j)$.  
 ## Formal Syntax Rules  
 ### Operator and Expression Grammar  
