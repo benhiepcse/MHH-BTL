@@ -23,17 +23,17 @@
 - **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
 ## Hard regulations  
 - **No double-booking**:  
-  * First - order formula:
+  * **First - order formula**:
         $\forall i \in I, \forall j, k \in J ((j \neq k) \land Assign(i, j) \land Overlap(j, k) \rightarrow \neg Assign(i, k))$
-  * Meaning: If an invigilator $i$ is assigned to shift $j$, shift $j$ and shift $k$ are overlapped to each other (shift $j$ and shift $k$ are different from each other), then invigilator $i$ can't be assigned to shift $k$
+  * **Meaning**: If an invigilator $i$ is assigned to shift $j$, shift $j$ and shift $k$ are overlapped to each other (shift $j$ and shift $k$ are different from each other), then invigilator $i$ can't be assigned to shift $k$
 - **Availability**:  
-  * First-order formula:
+  * **First-order formula**:
         $\forall i \in I, \forall j \in J (Busy(i, j) \rightarrow \neg Assign(i, j))$
-  * Meaning: If an invigilator $i$ is busy at shift $j$, then invigilator $i$ can't be assigned at shift $j$
+  * **Meaning**: If an invigilator $i$ is busy at shift $j$, then invigilator $i$ can't be assigned at shift $j$
 - **Capacity**:
-  * First-order formula:
+  * **First-order formula**:
        $\forall j \in J |\\{i \in I : Assign(i, j)\\}| = r(j)$.
-  * Meaning: For every shift $j$, the number of invigilators $i$ assigned to that shift is exactly $r(j)$.  
+  * **Meaning**: For every shift $j$, the number of invigilators $i$ assigned to that shift is exactly $r(j)$.  
 ## Formal Syntax Rules  
 ### Operator and Expression Grammar  
 - **Binary Operators** ($\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, $=$, $!=$):  
