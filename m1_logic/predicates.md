@@ -22,16 +22,18 @@
 - **AtCampus(j, c)** - parameters: $j \in J$, $c \in C$. $AtCampus(j, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ is occured at campus $c$, and $\text{False}$ if shift $j$ isn't occured at campus $c$.
 - **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
 ## Hard regulations  
-- **No double-booking**: $\forall i \in I, \forall j, k \in J ((j \neq k) \land Assign(i, j) \land Overlap(j, k) \rightarrow \neg Assign(i, k))$
+- **No double-booking**:  
+  * First - order formula:
+        $\forall i \in I, \forall j, k \in J ((j \neq k) \land Assign(i, j) \land Overlap(j, k) \rightarrow \neg Assign(i, k))$
   * Meaning: If an invigilator $i$ is assigned to shift $j$, shift $j$ and shift $k$ are overlapped to each other (shift $j$ and shift $k$ are different from each other), then invigilator $i$ can't be assigned to shift $k$
-- **Availability**: $\forall i \in I, \forall j \in J (Busy(i, j) \rightarrow \neg Assign(i, j))$
+- **Availability**:  
+  * First-order formula:
+        $\forall i \in I, \forall j \in J (Busy(i, j) \rightarrow \neg Assign(i, j))$
   * Meaning: If an invigilator $i$ is busy at shift $j$, then invigilator $i$ can't be assigned at shift $j$
-- **Capacity**: For every shift $j$, exactly $r(j)$ invigilators are assigned to shift $j$
-  * I separate "Exact Capacity of $r(j)$" into two parts: "At least $r(j)$ invigilators" and "At most $r(j)$ invigilators"  
-  * **At least $r(j)$ invigilators**: $$\forall j \in J, \exists i_1, i_2, \dots, i_{r(j)} \in I \left( \left( \bigwedge_{1 \le a < b \le  {r(j)}} i_a \neq i_b \right) \land \left( \bigwedge_{m=1}^{r(j)} Assign(i_m, j) \right) \right)$$  
-    * Meaning: There exist $r(j)$ distinct invigilators who are assigned to shift $j$  
-  * **At most $r(j)$ invigilators**: $$\forall j \in J, \forall i_1, i_2, \dots, i_{r(j)+1} \in I \left( \left( \bigwedge_{m=1}^{r(j)+1} Assign(i_m, j) \right) \rightarrow \left( \bigvee_{1 \le a < b \le {r(j)+1}} i_a = i_b \right) \right)$$  
-    * Meaning: If you pick any $r(j) + 1$ invigilators who are assigned to shift $j$, at least two of them must actually be the same person.
+- **Capacity**:
+  * First-order formula:
+       $\forall j \in J |(i \in I : Assign(i, j)| = r(j)$.
+  * Meaning: For every shift $j$, the number of invigilators $i$ assigned to that shift is exactly $r(j)$.  
 ## Formal Syntax Rules  
 ### Operator and Expression Grammar  
 - **Binary Operators** ($\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, $=$, $!=$):  
