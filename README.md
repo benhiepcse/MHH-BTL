@@ -26,6 +26,12 @@ Push a tagged commit `week-01 … week-14` with a `CHECKPOINTS.md` entry; tag mi
 `python run_all.py --seed $(cat data/seed.txt)` must reproduce every number in your report from a clean clone.
 
 Declare any AI-tool use in this README. Full rules, rubric (Appendix B), and the red **CRITICAL** items are in the brief.
+
+## AI-use declaration
+
+2453210 Phan Thế Thông used OpenAI Codex as an AI assistant while implementing
+W02–T3 / Requirement 1.2. Assistance covered drafting and reviewing the CNF
+encoder, verifier, and local test commands for the toy and real data slices.
 #### Cardinality / Counting Rules (Req 1.3)
 - **Exact Capacity Constraint**: Shift $j$ requires exactly $k$ invigilators.
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
