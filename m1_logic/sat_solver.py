@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -92,7 +93,8 @@ def load_instance(source: str | Path | Mapping[str, Any]) -> dict[str, Any]:
     if isinstance(source, Mapping):
         data = dict(source)
     else:
-        path = Path(source).expanduser().resolve()
+        supplied_path = Path(source).expanduser()
+        path = supplied_path.resolve()
         if not path.is_file():
             raise InputValidationError(f"input file does not exist: {path}")
         try:
@@ -105,7 +107,14 @@ def load_instance(source: str | Path | Mapping[str, Any]) -> dict[str, Any]:
                 f"invalid JSON in {path} at line {exc.lineno}, column {exc.colno}: {exc.msg}"
             ) from exc
         data = dict(_require_mapping(data, "document root"))
-        data.setdefault("source", str(path))
+        # Store portable provenance.  Absolute paths differ between a student's
+        # machine and the autograder and would make the result non-reproducible.
+        try:
+            portable_source = path.relative_to(Path.cwd().resolve()).as_posix()
+        except ValueError:
+            portable_source = supplied_path.name
+        data.setdefault("source", portable_source)
+        data.setdefault("source_sha256", hashlib.sha256(path.read_bytes()).hexdigest())
 
     version = data.get("schema_version", SCHEMA_VERSION)
     if version != SCHEMA_VERSION:
@@ -482,6 +491,7 @@ class InvigilatorSATSolver:
         common: dict[str, Any] = {
             "instance_name": self.instance["instance_name"],
             "source": self.instance.get("source"),
+            "source_sha256": self.instance.get("source_sha256"),
             "format": self.instance["format"],
             "status": str(status).upper(),
             "statistics": {
@@ -551,12 +561,39 @@ def solve_instance(
 
 
 def build_results_document(
-    result: Mapping[str, Any], *, team_id: str | None, seed: int | None
+    results: Mapping[str, Any] | Sequence[Mapping[str, Any]],
+    *,
+    team_id: str | None,
+    seed: int | None,
 ) -> dict[str, Any]:
-    """Wrap one solver result in the stable M1 output envelope."""
+    """Wrap one or more solver runs in the stable, non-overwriting M1 envelope."""
 
-    status = result.get("status")
-    successful = status in {"SAT", "UNSAT"}
+    entries = [dict(results)] if isinstance(results, Mapping) else [dict(x) for x in results]
+    if not entries:
+        raise InputValidationError("at least one solver result is required")
+    names = [entry.get("instance_name") for entry in entries]
+    if any(not isinstance(name, str) or not name for name in names):
+        raise InputValidationError("every result requires a non-empty instance_name")
+    duplicates = sorted({name for name in names if names.count(name) > 1})
+    if duplicates:
+        raise InputValidationError(f"duplicate result instance names: {duplicates}")
+
+    statuses = [entry.get("status") for entry in entries]
+    successful = all(status in {"SAT", "UNSAT"} for status in statuses)
+    sat_count = sum(status == "SAT" for status in statuses)
+    unsat_count = sum(status == "UNSAT" for status in statuses)
+    verified_sat = sum(
+        entry.get("status") == "SAT"
+        and isinstance(entry.get("validation"), Mapping)
+        and entry["validation"].get("valid") is True
+        for entry in entries
+    )
+    verified_unsat = sum(
+        entry.get("status") == "UNSAT"
+        and isinstance(entry.get("unsat_core"), Mapping)
+        and entry["unsat_core"].get("is_subset_minimal") is True
+        for entry in entries
+    )
     return {
         "schema_version": SCHEMA_VERSION,
         "module": MODULE,
@@ -568,14 +605,47 @@ def build_results_document(
             "name": "z3",
             "version": z3.get_version_string(),
         },
-        "instances": [dict(result)],
+        "pipeline": "T2 IAP JSON -> T3 CNF JSON -> T4 SAT solver",
+        "instances": entries,
         "summary": {
             "all_runs_successful": successful,
-            "sat_instances": int(status == "SAT"),
-            "unsat_instances": int(status == "UNSAT"),
-            "unknown_instances": int(status == "UNKNOWN"),
+            "instance_count": len(entries),
+            "sat_instances": sat_count,
+            "unsat_instances": unsat_count,
+            "unknown_instances": sum(status == "UNKNOWN" for status in statuses),
+            "verified_sat_models": verified_sat,
+            "verified_subset_minimal_cores": verified_unsat,
+            "all_inputs_are_cnf": all(entry.get("format") == "cnf" for entry in entries),
         },
     }
+
+
+def solve_instances(
+    sources: Sequence[str | Path | Mapping[str, Any]],
+    *,
+    timeout_ms: int = 30_000,
+    require_cnf: bool = True,
+) -> list[dict[str, Any]]:
+    """Solve a deterministic sequence of inputs without overwriting earlier runs.
+
+    The official W02-T4 path consumes the named CNF emitted by W02-T3.  Direct
+    IAP solving remains available only as an explicit cross-check through the
+    public API or ``--allow-iap-cross-check``.
+    """
+
+    if not sources:
+        raise InputValidationError("at least one --input is required")
+    results: list[dict[str, Any]] = []
+    for source in sources:
+        instance = load_instance(source)
+        if require_cnf and instance["format"] != "cnf":
+            raise InputValidationError(
+                f"{instance['instance_name']!r} has format {instance['format']!r}; "
+                "W02-T4 officially consumes CNF from W02-T3. "
+                "Use --allow-iap-cross-check only for a documented cross-check."
+            )
+        results.append(InvigilatorSATSolver(instance, timeout_ms=timeout_ms).solve())
+    return results
 
 
 def write_results(document: Mapping[str, Any], output: str | Path) -> Path:
@@ -607,12 +677,28 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Solve a named IAP/CNF SAT instance and emit deterministic JSON."
     )
-    parser.add_argument("--input", required=True, type=Path, help="UTF-8 instance JSON")
+    parser.add_argument(
+        "--input",
+        required=True,
+        type=Path,
+        nargs="+",
+        help="one or more UTF-8 CNF JSON files emitted by W02-T3",
+    )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="result JSON path")
     parser.add_argument("--seed", type=int, default=None, help="team seed recorded in output")
     parser.add_argument("--team-id", default=None, help="canonical CO2011 team ID")
     parser.add_argument(
         "--timeout-ms", type=int, default=30_000, help="positive Z3 timeout in milliseconds"
+    )
+    parser.add_argument(
+        "--allow-iap-cross-check",
+        action="store_true",
+        help="also accept raw T2 IAP JSON for a documented cross-check; CNF is the official path",
+    )
+    parser.add_argument(
+        "--require-complete-suite",
+        action="store_true",
+        help="require at least two SAT and two UNSAT results (toy + real-data suite)",
     )
     return parser
 
@@ -622,20 +708,35 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     args = _parser().parse_args(argv)
     try:
-        if args.input.expanduser().resolve() == args.output.expanduser().resolve():
-            raise InputValidationError("--output must not overwrite --input")
-        result = solve_instance(args.input, timeout_ms=args.timeout_ms)
-        document = build_results_document(result, team_id=args.team_id, seed=args.seed)
+        output_path = args.output.expanduser().resolve()
+        if any(path.expanduser().resolve() == output_path for path in args.input):
+            raise InputValidationError("--output must not overwrite any --input")
+        results = solve_instances(
+            args.input,
+            timeout_ms=args.timeout_ms,
+            require_cnf=not args.allow_iap_cross_check,
+        )
+        document = build_results_document(results, team_id=args.team_id, seed=args.seed)
+        summary = document["summary"]
+        if args.require_complete_suite and (
+            summary["sat_instances"] < 2 or summary["unsat_instances"] < 2
+        ):
+            raise InputValidationError(
+                "complete W02-T4 suite requires at least two SAT and two UNSAT inputs "
+                "(toy and real-data)"
+            )
         output = write_results(document, args.output)
     except (InputValidationError, OSError, ValueError, RuntimeError) as exc:
         print(f"[sat_solver] error: {exc}", file=sys.stderr)
         return 2
 
+    for result in results:
+        print(f"[sat_solver] {result['instance_name']}: {result['status']}")
     print(
-        f"[sat_solver] {result['instance_name']}: {result['status']} -> {output}",
-        file=sys.stdout,
+        f"[sat_solver] wrote {len(results)} result(s): "
+        f"SAT={summary['sat_instances']}, UNSAT={summary['unsat_instances']} -> {output}"
     )
-    return 0 if result["status"] in {"SAT", "UNSAT"} else 3
+    return 0 if summary["all_runs_successful"] else 3
 
 
 if __name__ == "__main__":
