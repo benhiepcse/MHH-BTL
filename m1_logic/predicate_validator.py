@@ -1,49 +1,10 @@
-#!/usr/bin/env python3
-"""
-predicate_validator.py
-
-Validate common formatting/syntax errors in mathematical predicates written
-inside a Markdown file.
-
-The checks are based on the "Formal Syntax Rules" section of predicate.md:
-
-1. Binary operators:
-       AND, OR, implication, equivalence, equality, inequality
-   must have a valid expression on both sides.
-
-2. Unary operators:
-       NOT / negation
-   cannot be followed immediately by another binary operator or ')'.
-
-3. Quantifiers:
-       forall / exists
-   must be followed by one or more valid domain variables, optionally followed
-   by a domain constraint such as "in I".
-
-4. Parentheses/braces:
-   (), [] and {} must be balanced.
-
-5. Predicate calls:
-   A predicate/function call such as Assign(i, j) must have balanced
-   parentheses and non-empty arguments.
-
-The validator intentionally performs syntax/format checks only. It does not
-attempt to prove that a formula is logically correct.
-"""
-
 from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
 from pathlib import Path
 import re
-import sys
 from typing import Iterable
-
-
-# ---------------------------------------------------------------------------
-# Diagnostics
-# ---------------------------------------------------------------------------
 
 @dataclass
 class Error:
@@ -54,11 +15,6 @@ class Error:
     def __str__(self) -> str:
         return f"line {self.line}, column {self.column}: {self.message}"
 
-
-# ---------------------------------------------------------------------------
-# Token definitions
-# ---------------------------------------------------------------------------
-.
 FORMAT_COMMANDS = {
     r"\left", r"\right", r"\displaystyle", r"\textstyle",
     r"\big", r"\Big", r"\bigg", r"\Bigg",
@@ -73,6 +29,12 @@ BINARY_COMMANDS = {
     r"\iff": "↔",
     r"\ne": "!=",
     r"\neq": "!=",
+    r"\leq": "≤",
+    r"\le": "≤",
+    r"\geq": "≥",
+    r"\ge": "≥",
+    r"\in": "∈",
+    r"\notin": "∉",
 }
 
 BINARY_SYMBOLS = {
@@ -83,6 +45,13 @@ BINARY_SYMBOLS = {
     "=": "equality (=)",
     "!=": "inequality (!=)",
     "≠": "inequality (≠)",
+    # These are relation operators used in domain/formula syntax.
+    "∈": "membership (∈)",
+    "∉": "non-membership (∉)",
+    "<": "less-than (<)",
+    ">": "greater-than (>)",
+    "≤": "less-than-or-equal (≤)",
+    "≥": "greater-than-or-equal (≥)",
 }
 
 UNARY_COMMANDS = {
@@ -103,30 +72,35 @@ QUANTIFIER_SYMBOLS = {"∀", "∃"}
 
 OTHER_RELATIONS = {"∈", "∉", "<", ">", "≤", "≥"}
 
-# Identifier used for variables, set names, function/predicate names, etc.
+KNOWN_CALL_ARITY = {
+    "Assign": 2,
+    "Busy": 2,
+    "Overlap": 2,
+    "AtCampus": 2,
+    "Prefer": 2,
+    "r": 1,
+    "duration": 1,
+    "start": 1,
+    "date": 1,
+}
+
 IDENTIFIER_RE = re.compile(
-    r"(?:"
     r"[A-Za-z_][A-Za-z0-9_]*"
-    r"|[ivjkcprnmkta-zA-Z]_[A-Za-z0-9]+"
-    r")"
 )
 
 
-# ---------------------------------------------------------------------------
-# Markdown / LaTeX preprocessing
-# ---------------------------------------------------------------------------
+def is_identifier(value: str) -> bool:
+    """Return True when value has a valid variable/identifier form."""
+    return bool(IDENTIFIER_RE.fullmatch(value))
+
 
 def extract_math(text: str) -> list[tuple[int, int, str]]:
-    """
-    Extract inline/display math.
-
-    Returns tuples: (start_line, start_column, formula).
-    """
     results: list[tuple[int, int, str]] = []
 
     display_pattern = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
-
-    inline_pattern = re.compile(r"(?<!\$)\$(?!\$)(.*?)(?<!\$)\$(?!\$)", re.DOTALL)
+    inline_pattern = re.compile(
+        r"(?<!\$)\$(?!\$)(.*?)(?<!\$)\$(?!\$)", re.DOTALL
+    )
 
     covered: list[tuple[int, int]] = []
     for match in display_pattern.finditer(text):
@@ -150,13 +124,6 @@ def extract_math(text: str) -> list[tuple[int, int, str]]:
 
 
 def normalize_latex(formula: str) -> str:
-    """
-    Convert common LaTeX operators to plain symbols while preserving
-    meaningful characters.
-
-    Command matching is token-based so that '\\ne' never accidentally matches
-    the beginning of '\\neg'.
-    """
     text = formula
 
     command_map = {
@@ -198,20 +165,22 @@ def normalize_latex(formula: str) -> str:
     text = re.sub(r"\\text\s*\{([^{}]*)\}", r" \1 ", text)
     text = re.sub(r"\\operatorname\s*\{([^{}]*)\}", r" \1 ", text)
 
+    # LaTeX escaped delimiters such as \{ and \}. The uploaded predicates.md
+    # uses doubled backslashes (\\{, \\}), so normalize one or more slashes.
+    text = re.sub(r"\\+\{", " { ", text)
+    text = re.sub(r"\\+\}", " } ", text)
+    text = re.sub(r"\\+\[", " [ ", text)
+    text = re.sub(r"\\+\]", " ] ", text)
+    text = re.sub(r"\\+\(", " ( ", text)
+    text = re.sub(r"\\+\)", " ) ", text)
+
     text = text.replace(r"\left", "").replace(r"\right", "")
-    text = text.replace(r"\!=", " !=")
+    text = text.replace(r"\!=", " != ")
 
     return text
 
 
-
 def tokenize(formula: str) -> list[tuple[str, str, int]]:
-    """
-    Tokenize a normalized formula.
-
-    Token tuple:
-        (kind, value, character_position)
-    """
     tokens: list[tuple[str, str, int]] = []
     i = 0
 
@@ -248,10 +217,7 @@ def tokenize(formula: str) -> list[tuple[str, str, int]]:
             continue
 
         if ch in "()[]{}":
-            if i > 0 and formula[i - 1] == "\\\\":
-                tokens.append(("ATOM", ch, i))
-            else:
-                tokens.append((ch, ch, i))
+            tokens.append((ch, ch, i))
             i += 1
             continue
 
@@ -260,8 +226,14 @@ def tokenize(formula: str) -> list[tuple[str, str, int]]:
             i += 1
             continue
 
+        if ch == ":":
+            # Set-builder notation, e.g. {i ∈ I : Assign(i,j)}.
+            tokens.append(("SET_BUILDER_COLON", ch, i))
+            i += 1
+            continue
+
         if ch in OTHER_RELATIONS:
-            tokens.append(("RELATION", ch, i))
+            tokens.append(("BINARY", ch, i))
             i += 1
             continue
 
@@ -311,23 +283,16 @@ def is_closing(kind: str) -> bool:
 
 
 def is_operand_start(kind: str) -> bool:
-    """
-    Tokens which can begin an expression under the assignment's simplified
-    predicate grammar.
-    """
     return kind in {
         "ATOM", "(", "[", "{",
         "UNARY", "QUANTIFIER",
-        "COMMAND",
+        "COMMAND", "CARDINALITY_BAR",
     }
 
 
 def is_operand_end(kind: str) -> bool:
-    """
-    Tokens which can end an expression.
-    """
     return kind in {
-        "ATOM", ")",
+        "ATOM", ")", "]", "}",
         "COMMAND", "CARDINALITY_BAR",
     }
 
@@ -336,25 +301,27 @@ def matching_open(close: str) -> str:
     return {")": "(", "]": "[", "}": "{"}[close]
 
 
-def find_matching_close(tokens: list[tuple[str, str, int]], start: int) -> int | None:
+def find_matching_close(
+    tokens: list[tuple[str, str, int]], start: int
+) -> int | None:
     open_kind = tokens[start][0]
     close_kind = {"(": ")", "[": "]", "{": "}"}[open_kind]
-    depth = 0
+    stack: list[str] = []
 
     for i in range(start, len(tokens)):
         kind = tokens[i][0]
-        if kind == open_kind:
-            depth += 1
-        elif kind == close_kind:
-            depth -= 1
-            if depth == 0:
+        if is_opening(kind):
+            stack.append(kind)
+        elif is_closing(kind):
+            if not stack:
+                return None
+            if kind != {"(": ")", "[": "]", "{": "}"}[stack[-1]]:
+                return None
+            stack.pop()
+            if not stack:
                 return i
+
     return None
-
-
-# ---------------------------------------------------------------------------
-# Individual checks
-# ---------------------------------------------------------------------------
 
 def check_balanced_delimiters(
     tokens: list[tuple[str, str, int]],
@@ -378,8 +345,8 @@ def check_balanced_delimiters(
                     Error(
                         line,
                         pos + 1,
-                        f"mismatched delimiter '{value}', expected "
-                        f"closing delimiter for '{stack[-1][0]}'",
+                        f"mismatched delimiter '{value}', expected closing "
+                        f"delimiter for '{stack[-1][0]}'",
                     )
                 )
                 stack.pop()
@@ -389,7 +356,11 @@ def check_balanced_delimiters(
     for opening, pos in stack:
         closing = {"(": ")", "[": "]", "{": "}"}[opening]
         errors.append(
-            Error(line, pos + 1, f"unclosed delimiter '{opening}', expected '{closing}'")
+            Error(
+                line,
+                pos + 1,
+                f"unclosed delimiter '{opening}', expected '{closing}'",
+            )
         )
 
     return errors
@@ -413,8 +384,8 @@ def check_binary_operators(
                 Error(
                     line,
                     pos + 1,
-                    f"binary operator '{value}' must be preceded by a term, "
-                    "predicate closing, or ')'",
+                    f"binary/relation operator '{value}' must be preceded by "
+                    "an expression",
                 )
             )
 
@@ -423,8 +394,8 @@ def check_binary_operators(
                 Error(
                     line,
                     pos + 1,
-                    f"binary operator '{value}' must be followed by a term, "
-                    "predicate opening, '(', or a unary operator",
+                    f"binary/relation operator '{value}' must be followed by "
+                    "an expression",
                 )
             )
 
@@ -449,11 +420,19 @@ def check_unary_operators(
                     line,
                     pos + 1,
                     f"unary operator '{value}' cannot be followed immediately "
-                    "by a binary operator or closing parenthesis",
+                    "by a binary/relation operator or closing delimiter",
                 )
             )
 
         if i + 1 >= len(tokens):
+            errors.append(
+                Error(
+                    line,
+                    pos + 1,
+                    f"unary operator '{value}' must be followed by an expression",
+                )
+            )
+        elif not is_operand_start(next_kind):
             errors.append(
                 Error(
                     line,
@@ -468,72 +447,88 @@ def check_unary_operators(
 def parse_quantifier_variables(
     tokens: list[tuple[str, str, int]],
     q_index: int,
-) -> tuple[set[str], int | None]:
-    """
-    Parse a simplified quantifier declaration.
-
-    Examples accepted:
-        ∀ i
-        ∀ i ∈ I
-        ∀ j, k ∈ J
-        ∃ i_1, i_2, ..., i_n ∈ I
-
-    Returns:
-        (declared_variables, index_after_declaration)
-
-    The parser stops before '(' because the quantified expression normally
-    starts there.
-    """
+) -> tuple[set[str], int | None, list[tuple[int, str]]]:
     variables: set[str] = set()
+    local_errors: list[tuple[int, str]] = []
     i = q_index + 1
 
     if i >= len(tokens):
-        return variables, None
+        return variables, None, [
+            (tokens[q_index][2], "quantifier must be followed by a valid domain variable")
+        ]
 
-    expecting_variable = True
-    domain_seen = False
+    if tokens[i][0] != "ATOM" or not is_identifier(tokens[i][1]):
+        return variables, None, [
+            (
+                tokens[i][2],
+                "quantifier must be followed by a valid domain variable",
+            )
+        ]
 
     while i < len(tokens):
-        kind, value, _ = tokens[i]
+        kind, value, pos = tokens[i]
 
-        if kind == "ATOM":
-            if expecting_variable:
-                variables.add(value)
-                expecting_variable = False
-                i += 1
-                continue
+        if kind != "ATOM" or not is_identifier(value):
+            local_errors.append(
+                (pos, "expected a valid variable name in the quantifier declaration")
+            )
+            return variables, None, local_errors
 
-            if domain_seen:
-                break
+        variables.add(value)
+        i += 1
 
-            break
+        if i >= len(tokens):
+            return variables, i, local_errors
 
-        if kind == "SEP" and value == ",":
-            if expecting_variable:
-                break
-            expecting_variable = True
+        next_kind, next_value, next_pos = tokens[i]
+
+        if next_kind == "SEP" and next_value == ",":
+            comma_pos = next_pos
             i += 1
+            if (
+                i >= len(tokens)
+                or tokens[i][0] != "ATOM"
+                or not is_identifier(tokens[i][1])
+            ):
+                local_errors.append(
+                    (
+                        comma_pos,
+                        "quantifier variable list has a comma without a following valid variable",
+                    )
+                )
+                return variables, None, local_errors
             continue
 
-        if kind == "RELATION" and value == "∈":
-            if expecting_variable or domain_seen:
-                break
-            domain_seen = True
+        if next_kind == "BINARY" and next_value == "∈":
             i += 1
+            if i >= len(tokens) or tokens[i][0] != "ATOM":
+                relation_pos = next_pos
+                local_errors.append(
+                    (
+                        relation_pos,
+                        "membership operator '∈' in a quantifier must be followed by a domain",
+                    )
+                )
+                return variables, None, local_errors
 
-            if i < len(tokens) and tokens[i][0] == "ATOM":
-                i += 1
-                return variables, i
+            i += 1
+            return variables, i, local_errors
 
-            return variables, None
+        if next_kind == "ATOM":
+            if i + 1 < len(tokens) and tokens[i + 1][0] == "(":
+                return variables, i, local_errors
 
-        # Expression begins.
-        break
+            local_errors.append(
+                (
+                    next_pos,
+                    "multiple quantifier variables must be separated by ',' or followed by '∈'",
+                )
+            )
+            return variables, None, local_errors
 
-    if expecting_variable:
-        return variables, None
+        return variables, i, local_errors
 
-    return variables, i
+    return variables, i, local_errors
 
 
 def check_quantifiers(
@@ -546,115 +541,287 @@ def check_quantifiers(
         if kind != "QUANTIFIER":
             continue
 
-        variables, after = parse_quantifier_variables(tokens, i)
+        variables, after, local_errors = parse_quantifier_variables(tokens, i)
+        for error_pos, message in local_errors:
+            errors.append(Error(line, error_pos + 1, message))
 
         if not variables or after is None:
+            continue
+
+        if after >= len(tokens):
             errors.append(
                 Error(
                     line,
                     pos + 1,
-                    f"quantifier '{value}' must be followed by a valid domain variable",
+                    f"quantifier '{value}' must be followed by a quantified expression",
                 )
             )
             continue
 
-        if after < len(tokens):
-            next_kind = tokens[after][0]
-            if next_kind in {"BINARY", ")", "]", "}"}:
-                errors.append(
-                    Error(
-                        line,
-                        tokens[after][2] + 1,
-                        f"invalid token after quantifier '{value}' declaration",
-                    )
+        next_kind = tokens[after][0]
+        if next_kind in {"BINARY", ")", "]", "}"}:
+            errors.append(
+                Error(
+                    line,
+                    tokens[after][2] + 1,
+                    f"invalid token after quantifier '{value}' declaration",
                 )
+            )
 
     return errors
+
+
+def is_function_call_start(
+    tokens: list[tuple[str, str, int]], index: int
+) -> bool:
+    return (
+        index + 1 < len(tokens)
+        and tokens[index][0] == "ATOM"
+        and tokens[index + 1][0] == "("
+    )
+
+
+def find_predicate_call_spans(
+    tokens: list[tuple[str, str, int]],
+) -> list[tuple[int, int]]:
+    spans: list[tuple[int, int]] = []
+    for i in range(len(tokens) - 1):
+        if not is_function_call_start(tokens, i):
+            continue
+        close = find_matching_close(tokens, i + 1)
+        if close is not None:
+            spans.append((i + 1, close))
+    return spans
 
 
 def check_operand_adjacency(
     tokens: list[tuple[str, str, int]],
     line: int,
 ) -> list[Error]:
-    """
-    Catch especially common forms such as:
-        Assign(i,j) Assign(k,j)
-        (A)(B)
-        ) (
-        variable )
-    without trying to become a full theorem prover/parser.
-    """
     errors: list[Error] = []
+    call_spans = find_predicate_call_spans(tokens)
 
     for i in range(len(tokens) - 1):
         kind1, value1, pos1 = tokens[i]
         kind2, value2, pos2 = tokens[i + 1]
 
-        if (
-            is_operand_end(kind1)
-            and kind2 == "ATOM"
-            and value1.isascii()
-            and value2.isascii()
-        ):
+        if any(open_i < i and i + 1 < close_i for open_i, close_i in call_spans):
+            continue
+
+        if not is_operand_end(kind1) or not is_operand_start(kind2):
+            continue
+
+        # ATOM followed by '(' is a function/predicate call, not missing op.
+        if kind1 == "ATOM" and kind2 == "(":
+            continue
+
+        if (kind1 == "CARDINALITY_BAR" and kind2 == "{") or (kind1 == "}" and kind2 == "CARDINALITY_BAR"):
+            continue
+
+        errors.append(
+            Error(
+                line,
+                pos2 + 1,
+                f"missing operator between '{value1}' and '{value2}'",
+            )
+        )
+
+    return errors
+
+
+def split_top_level_arguments(
+    tokens: list[tuple[str, str, int]],
+) -> tuple[list[list[tuple[str, str, int]]], list[tuple[int, str]]]:
+    args: list[list[tuple[str, str, int]]] = []
+    errors: list[tuple[int, str]] = []
+    current: list[tuple[str, str, int]] = []
+    stack: list[str] = []
+
+    for kind, value, pos in tokens:
+        if is_opening(kind):
+            stack.append(kind)
+            current.append((kind, value, pos))
+            continue
+
+        if is_closing(kind):
+            current.append((kind, value, pos))
+            if stack:
+                expected = {"(": ")", "[": "]", "{": "}"}[stack[-1]]
+                if value == expected:
+                    stack.pop()
+            continue
+
+        if kind == "SEP" and value == "," and not stack:
+            if not current:
+                errors.append(
+                    (pos, "predicate/function argument list contains an empty argument")
+                )
+            else:
+                args.append(current)
+            current = []
+            continue
+
+        if kind == "SEP" and value == ";" and not stack:
+            errors.append(
+                (pos, "use ',' to separate predicate/function arguments, not ';'")
+            )
+            current.append((kind, value, pos))
+            continue
+
+        current.append((kind, value, pos))
+
+    if current:
+        args.append(current)
+    elif tokens:
+        last_pos = tokens[-1][2]
+        errors.append(
+            (last_pos, "predicate/function argument list ends with an empty argument")
+        )
+
+    return args, errors
+
+
+def check_argument_tokens(
+    arg_tokens: list[tuple[str, str, int]],
+    line: int,
+) -> list[Error]:
+    errors: list[Error] = []
+
+    if not arg_tokens:
+        return errors
+
+    for i in range(len(arg_tokens) - 1):
+        kind1, value1, _ = arg_tokens[i]
+        kind2, value2, pos2 = arg_tokens[i + 1]
+
+        if kind1 == "SEP" and value1 == ";":
             errors.append(
                 Error(
                     line,
                     pos2 + 1,
-                    f"missing operator between '{value1}' and '{value2}'",
+                    "semicolon is not a valid predicate/function argument separator",
                 )
             )
 
-        if kind1 == ")" and kind2 == "(":
-            errors.append(
-                Error(
-                    line,
-                    pos2 + 1,
-                    "missing operator between ')' and '('",
-                )
+        if not is_operand_end(kind1) or not is_operand_start(kind2):
+            continue
+
+        if kind1 == "ATOM" and kind2 == "(":
+            continue
+
+        if (kind1 == "CARDINALITY_BAR" and kind2 == "{") or (kind1 == "}" and kind2 == "CARDINALITY_BAR"):
+            continue
+
+        errors.append(
+            Error(
+                line,
+                pos2 + 1,
+                f"missing comma between argument terms '{value1}' and '{value2}'",
             )
+        )
 
     return errors
 
 
 def check_predicate_calls(
-    formula: str,
     tokens: list[tuple[str, str, int]],
     line: int,
 ) -> list[Error]:
-    """
-    Validate simple calls such as Assign(i, j).
-
-    A function/predicate name immediately followed by '(' must contain a
-    closing ')'. Empty calls like Assign() are reported.
-    """
     errors: list[Error] = []
 
     for i in range(len(tokens) - 1):
-        kind, name, pos = tokens[i]
-        next_kind, next_value, next_pos = tokens[i + 1]
-
-        if kind != "ATOM" or next_kind != "(":
+        if not is_function_call_start(tokens, i):
             continue
 
+        name = tokens[i][1]
+        pos = tokens[i][2]
         close = find_matching_close(tokens, i + 1)
-        if close is None:
-            continue  
 
-        if close == i + 2:
+        if close is None:
+            continue
+
+        inner = tokens[i + 2:close]
+
+        if not inner:
             errors.append(
                 Error(
                     line,
                     pos + 1,
-                    f"predicate/function '{name}' has empty argument list",
+                    f"predicate/function '{name}' has an empty argument list",
                 )
             )
+            continue
+
+        args, structural_errors = split_top_level_arguments(inner)
+        for error_pos, message in structural_errors:
+            errors.append(Error(line, error_pos + 1, message))
+
+        argument_errors_found = False
+        for arg in args:
+            if not arg:
+                continue
+            argument_errors = check_argument_tokens(arg, line)
+            if argument_errors:
+                argument_errors_found = True
+                errors.extend(argument_errors)
+
+        expected_arity = KNOWN_CALL_ARITY.get(name)
+        if expected_arity is not None and not structural_errors and not argument_errors_found:
+            nonempty_args = [arg for arg in args if arg]
+            if len(nonempty_args) != expected_arity:
+                errors.append(
+                    Error(
+                        line,
+                        pos + 1,
+                        f"predicate/function '{name}' expects {expected_arity} "
+                        f"argument(s), but {len(nonempty_args)} were provided",
+                    )
+                )
 
     return errors
 
 
-# ---------------------------------------------------------------------------
-# Validation
-# ---------------------------------------------------------------------------
+def check_unknown_tokens(
+    tokens: list[tuple[str, str, int]],
+    line: int,
+) -> list[Error]:
+    errors: list[Error] = []
+    for kind, value, pos in tokens:
+        if kind == "UNKNOWN":
+            errors.append(
+                Error(
+                    line,
+                    pos + 1,
+                    f"unexpected character '{value}' in formula",
+                )
+            )
+    return errors
+
+
+def check_set_builder_colons(
+    tokens: list[tuple[str, str, int]],
+    line: int,
+) -> list[Error]:
+    errors: list[Error] = []
+
+    for i, (kind, value, pos) in enumerate(tokens):
+        if kind != "SET_BUILDER_COLON":
+            continue
+
+        prev_kind = tokens[i - 1][0] if i > 0 else None
+        next_kind = tokens[i + 1][0] if i + 1 < len(tokens) else None
+
+        if prev_kind is None or prev_kind in {"{", "SEP", "BINARY", "UNARY"}:
+            errors.append(
+                Error(line, pos + 1, "set-builder ':' must follow a set-builder term")
+            )
+
+        if next_kind is None or next_kind in {"}", "SEP", "BINARY", "UNARY"}:
+            errors.append(
+                Error(line, pos + 1, "set-builder ':' must be followed by a condition")
+            )
+
+    return errors
 
 def validate_formula(formula: str, line: int) -> list[Error]:
     normalized = normalize_latex(formula)
@@ -666,15 +833,19 @@ def validate_formula(formula: str, line: int) -> list[Error]:
     errors.extend(check_unary_operators(tokens, line))
     errors.extend(check_quantifiers(tokens, line))
     errors.extend(check_operand_adjacency(tokens, line))
-    errors.extend(check_predicate_calls(normalized, tokens, line))
+    errors.extend(check_predicate_calls(tokens, line))
+    errors.extend(check_unknown_tokens(tokens, line))
+    errors.extend(check_set_builder_colons(tokens, line))
 
-    bar_positions = [pos for kind, value, pos in tokens if kind == "CARDINALITY_BAR"]
+    bar_positions = [
+        pos for kind, value, pos in tokens if kind == "CARDINALITY_BAR"
+    ]
     if len(bar_positions) % 2 != 0:
         errors.append(
             Error(
                 line,
                 bar_positions[-1] + 1,
-                "unmatched cardinality bar '|'",
+                "unmatched cardinality bar '|'"
             )
         )
 
@@ -682,13 +853,6 @@ def validate_formula(formula: str, line: int) -> list[Error]:
 
 
 def should_validate_math(start_line: int, formula: str, text: str) -> bool:
-    """
-    Decide whether a math span is an actual predicate expression.
-
-    The source document also contains mathematical notation in definitions,
-    prose examples, and the syntax-rule reference section. The validator
-    focuses on expressions that are intended to be parsed as predicates.
-    """
     lines = text.splitlines()
     section = ""
     for number in range(min(start_line, len(lines)), 0, -1):
@@ -710,8 +874,8 @@ def should_validate_math(start_line: int, formula: str, text: str) -> bool:
         re.search(r"\b[A-Za-z_][A-Za-z0-9_]*\s*\(", normalized)
     )
     has_quantifier = bool(re.search(r"[∀∃]", normalized))
-    return has_predicate_call or has_quantifier
 
+    return has_predicate_call or has_quantifier
 
 
 def validate_markdown(path: Path) -> list[Error]:
@@ -727,7 +891,11 @@ def validate_markdown(path: Path) -> list[Error]:
     errors: list[Error] = []
 
     masked = list(text)
-    for match in re.finditer(r"\$\$.*?\$\$|\$(?!\$).*?(?<!\$)\$", text, re.DOTALL):
+    for match in re.finditer(
+        r"\$\$.*?\$\$|\$(?!\$).*?(?<!\$)\$",
+        text,
+        re.DOTALL,
+    ):
         for i in range(match.start(), match.end()):
             if masked[i] != "\n":
                 masked[i] = " "
@@ -742,6 +910,7 @@ def validate_markdown(path: Path) -> list[Error]:
     for start_line, start_col, formula in math_blocks:
         if not should_validate_math(start_line, formula, text):
             continue
+
         formula_errors = validate_formula(formula, start_line)
         for error in formula_errors:
             if error.column == 1:
@@ -751,11 +920,6 @@ def validate_markdown(path: Path) -> list[Error]:
         errors.extend(formula_errors)
 
     return sorted(errors, key=lambda e: (e.line, e.column, e.message))
-
-
-# ---------------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------------
 
 def print_report(path: Path, errors: Iterable[Error]) -> int:
     errors = list(errors)
@@ -775,14 +939,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="Check common predicate-format errors in a Markdown file."
     )
+
+    default_file = Path(__file__).resolve().parent / "predicates.md"
+
     parser.add_argument(
         "file",
         nargs="?",
-        default="predicates.md",
-        help="Markdown file to validate (default: predicates.md)",
+        default=str(default_file),
+        help="Markdown file to validate (default: predicates.md next to this script)",
     )
-    args = parser.parse_args()
 
+    args = parser.parse_args()
     path = Path(args.file)
     return print_report(path, validate_markdown(path))
 
