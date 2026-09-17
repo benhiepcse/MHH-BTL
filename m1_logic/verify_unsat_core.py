@@ -97,33 +97,50 @@ def load_results(path: str | Path) -> dict[str, Any]:
     return document
 
 
-def select_result_entry(
-    document: Mapping[str, Any], instance_name: str | None
-) -> dict[str, Any]:
-    """Select exactly one UNSAT instance entry from a results document."""
+def select_result_entries(
+    document: Mapping[str, Any], instance_names: Sequence[str] | None
+) -> list[dict[str, Any]]:
+    """Select named UNSAT entries, or every UNSAT entry when names are omitted."""
 
     entries = document["instances"]
-    if instance_name is None:
-        candidates = [entry for entry in entries if entry.get("status") == "UNSAT"]
-        if len(candidates) != 1:
-            names = [entry.get("instance_name") for entry in candidates]
-            raise InputValidationError(
-                "--instance-name is required unless results contain exactly one "
-                f"UNSAT instance; candidates={names}"
-            )
-        return candidates[0]
+    if not instance_names:
+        selected = [entry for entry in entries if entry.get("status") == "UNSAT"]
+        if not selected:
+            raise InputValidationError("results contain no UNSAT instance to verify")
+        return selected
 
-    candidates = [entry for entry in entries if entry.get("instance_name") == instance_name]
-    if len(candidates) != 1:
-        raise InputValidationError(
-            f"expected exactly one result named {instance_name!r}, found {len(candidates)}"
-        )
-    entry = candidates[0]
-    if entry.get("status") != "UNSAT":
-        raise InputValidationError(
-            f"instance {instance_name!r} has status {entry.get('status')!r}, not 'UNSAT'"
-        )
-    return entry
+    duplicates = sorted({name for name in instance_names if instance_names.count(name) > 1})
+    if duplicates:
+        raise InputValidationError(f"duplicate --instance-name values: {duplicates}")
+    selected: list[dict[str, Any]] = []
+    for instance_name in instance_names:
+        candidates = [entry for entry in entries if entry.get("instance_name") == instance_name]
+        if len(candidates) != 1:
+            raise InputValidationError(
+                f"expected exactly one result named {instance_name!r}, found {len(candidates)}"
+            )
+        entry = candidates[0]
+        if entry.get("status") != "UNSAT":
+            raise InputValidationError(
+                f"instance {instance_name!r} has status {entry.get('status')!r}, not 'UNSAT'"
+            )
+        selected.append(entry)
+    return selected
+
+
+def index_instances(
+    sources: Sequence[str | Path | Mapping[str, Any]],
+) -> dict[str, dict[str, Any]]:
+    """Load verification inputs and index them by their stable instance name."""
+
+    indexed: dict[str, dict[str, Any]] = {}
+    for source in sources:
+        instance = load_instance(source)
+        name = instance["instance_name"]
+        if name in indexed:
+            raise InputValidationError(f"duplicate verification input instance: {name!r}")
+        indexed[name] = instance
+    return indexed
 
 
 def extract_core(entry: Mapping[str, Any], mode: str) -> list[str]:
@@ -379,7 +396,13 @@ def _parser() -> argparse.ArgumentParser:
             "Verify or deletion-minimize a named UNSAT core and update m1_results.json."
         )
     )
-    parser.add_argument("--input", required=True, type=Path, help="original UTF-8 instance JSON")
+    parser.add_argument(
+        "--input",
+        required=True,
+        type=Path,
+        nargs="+",
+        help="one or more original CNF JSON inputs used to produce the result entries",
+    )
     parser.add_argument(
         "--results", required=True, type=Path, help="m1_results.json from sat_solver.py"
     )
@@ -391,8 +414,9 @@ def _parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--instance-name",
+        action="append",
         default=None,
-        help="result entry to check; optional only when exactly one entry is UNSAT",
+        help="UNSAT result to check; repeatable; omitted means verify every UNSAT entry",
     )
     parser.add_argument(
         "--mode", choices=("verify", "minimize"), default="verify", help="operation to run"
@@ -410,26 +434,55 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         if args.timeout_ms <= 0:
             raise InputValidationError("--timeout-ms must be a positive integer")
-        instance = load_instance(args.input)
+        instances = index_instances(args.input)
         document = load_results(args.results)
-        entry = select_result_entry(document, args.instance_name)
-        core = extract_core(entry, args.mode)
-        if args.mode == "minimize":
-            report = minimize_unsat_core(instance, core, timeout_ms=args.timeout_ms)
-            verified = bool(report["verification"]["is_subset_minimal"])
-        else:
-            report = verify_unsat_core(instance, core, timeout_ms=args.timeout_ms)
-            verified = bool(report["is_subset_minimal"])
-        update_result_entry(entry, args.mode, report)
+        entries = select_result_entries(document, args.instance_name)
+        statuses: list[dict[str, Any]] = []
+        for entry in entries:
+            name = entry["instance_name"]
+            instance = instances.get(name)
+            if instance is None:
+                raise InputValidationError(
+                    f"no --input matches UNSAT result instance_name {name!r}"
+                )
+            if instance.get("format") != "cnf":
+                raise InputValidationError(
+                    f"verification input {name!r} is not CNF; W02-T4 cores must be "
+                    "verified against the named clauses emitted by W02-T3"
+                )
+            core = extract_core(entry, args.mode)
+            if args.mode == "minimize":
+                report = minimize_unsat_core(instance, core, timeout_ms=args.timeout_ms)
+                verified = bool(report["verification"]["is_subset_minimal"])
+            else:
+                report = verify_unsat_core(instance, core, timeout_ms=args.timeout_ms)
+                verified = bool(report["is_subset_minimal"])
+            update_result_entry(entry, args.mode, report)
+            statuses.append({"instance_name": name, "verified": verified})
+
+        all_verified = all(item["verified"] for item in statuses)
+        document["core_verification"] = {
+            "mode": args.mode,
+            "checked_instances": statuses,
+            "checked_count": len(statuses),
+            "all_subset_minimal": all_verified,
+        }
+        summary = document.get("summary")
+        if isinstance(summary, dict):
+            summary["verified_subset_minimal_cores"] = sum(
+                item["verified"] for item in statuses
+            )
         destination = args.output if args.output is not None else args.results
         output = write_results(document, destination)
     except (InputValidationError, OSError, ValueError, RuntimeError) as exc:
         print(f"[verify_unsat_core] error: {exc}", file=sys.stderr)
         return 2
 
-    status = "VERIFIED SUBSET-MINIMAL" if verified else "VERIFICATION FAILED"
-    print(f"[verify_unsat_core] {entry['instance_name']}: {status} -> {output}")
-    return 0 if verified else 4
+    for item in statuses:
+        status = "VERIFIED SUBSET-MINIMAL" if item["verified"] else "VERIFICATION FAILED"
+        print(f"[verify_unsat_core] {item['instance_name']}: {status}")
+    print(f"[verify_unsat_core] checked {len(statuses)} UNSAT core(s) -> {output}")
+    return 0 if all_verified else 4
 
 
 if __name__ == "__main__":
