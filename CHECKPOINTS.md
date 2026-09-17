@@ -10,5 +10,6 @@
 ## week-02 (14-20 Sep)
 - Progress: Triển khai và tích hợp Module 1 (Logic)
 - Per member:
+  - 2026-09-17 — 2453210 Phan Thế Thông: Implemented `m1_logic/cnf_encoder.py` and `m1_logic/verify_cnf.py` for CNF encoding of `Assign(i,j)`, availability, no-double-booking, and exactly-k constraints; verified toy SAT/UNSAT clause counts and real data slices with Z3 (Req 1.2, W02-T3).
   - 2453196 Nguyen Ngoc Thien: Triển khai Toy Instance (toy_instance.py) và trích xuất lát cắt dữ liệu thật từ Excel (prepare_logic_data.py) tạo ra m1_sat_slice.json và m1_unsat_slice.json tất định theo seed; xây dựng cơ chế tạo ca UNSAT có kiểm soát và tài liệu hóa (Req 1.2, W02-T2).
   - 2353150 Vo Duy Thong: Viết predicate_validator.py để kiểm tra các lỗi hình thức cơ bản của predicates.md
