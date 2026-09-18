@@ -2,7 +2,7 @@
 
 | Requirement | Primary owner (StudentID) | Reviewers |
 |---|---|---|
-| 1.1 | | |
+| 1.1 - W02-T1 Predicate Specification and Formal Verification | 2353150 Vo Duy Thong | |
 | 1.2 — W02-T2 Toy instance and real data slices | 2453196 Nguyen Ngoc Thien | 2452347 Le Vo Nghia Hiep |
 | 1.2 — W02-T4 SAT solver and minimal UNSAT core | 2452347 Le Vo Nghia Hiep | TBD |
 
