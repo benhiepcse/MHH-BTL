@@ -42,6 +42,15 @@ documentation. The implementation was authored, reviewed, tested, and
 integrated by the student, who remains responsible for understanding and
 explaining the submitted work.
 
+2453196 Nguyen Ngoc Thien used Google Antigravity as an AI assistant while
+implementing W02-T2 / Requirement 1.2. Assistance covered reviewing the JSON
+data schema, designing lightweight Excel parsing using Python's standard
+library, structuring the deterministic sampling logic with the team seed,
+creating the SAT and UNSAT instance generators, troubleshooting Git workflows,
+and drafting technical documentation. All modeling logic, constraint decisions,
+and generated data slices were authored, verified, and validated by the student,
+who remains responsible for explaining and defending the work.
+
 #### Cardinality / Counting Rules (Req 1.3)
 - **Exact Capacity Constraint**: Shift $j$ requires exactly $k$ invigilators.
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
