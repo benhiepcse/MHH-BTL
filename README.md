@@ -51,6 +51,13 @@ and drafting technical documentation. All modeling logic, constraint decisions,
 and generated data slices were authored, verified, and validated by the student,
 who remains responsible for explaining and defending the work.
 
+2353150 Vo Duy Thong used OpenAI ChatGPT as an AI assistant while implementing W02-T1 
+/ Requirement 1.1. Assistance covered throughout all the possible syntactic errors which 
+can be existed in predicates.md, which are Markdown and File Delimiters, Delimiters and Grouping, 
+Operators and Terms, Quantifier Expressions, Predicate and Functions Calls, Set-Builder Notation. 
+The implementation was authored, reviewed, tested, and integrated by the student, who remains 
+responsible for understanding and explaining the work.  
+
 #### Cardinality / Counting Rules (Req 1.3)
 - **Exact Capacity Constraint**: Shift $j$ requires exactly $k$ invigilators.
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
