@@ -20,7 +20,7 @@
     * Symmetric: $\forall j, k \in J (Overlap(j, k) \leftrightarrow Overlap(k, j))$
     * Irreflexive: $\forall j \in J (\neg Overlap(j, j))$ 
 - **AtCampus(j, c)** - parameters: $j \in J$, $c \in C$. $AtCampus(j, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if shift $j$ is occured at campus $c$, and $\text{False}$ if shift $j$ isn't occured at campus $c$.
-- **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in {\text{True}, \text{False}}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
+- **Prefer(i, c)** - parameters: $i \in I$, $c \in C$. $Prefer(i, c) \in \\{\text{True}, \text{False}\\}$: Evaluates to $\text{True}$ if invigilator $i$ is preferred to work at campus $c$, and ${\text{False}}$ if invigilator $i$ isn't preferred working at campus $c$.
 ## Hard regulations  
 - **No double-booking**:  
   * **First - order formula**:
