@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "instance_name": "toy_instance_sat__cnf",
+  "source_instance": "toy_instance_sat",
+  "format": "cnf",
+  "variables": {
+    "Assign(CB1,Morning)": 1,
+    "Assign(CB1,Afternoon)": 2,
+    "Assign(CB2,Morning)": 3,
+    "Assign(CB2,Afternoon)": 4,
+    "Assign(CB3,Morning)": 5,
+    "Assign(CB3,Afternoon)": 6
+  },
+  "assignments": [
+    {
+      "variable": 1,
+      "invigilator": "CB1",
+      "shift": "Morning"
+    },
+    {
+      "variable": 2,
+      "invigilator": "CB1",
+      "shift": "Afternoon"
+    },
+    {
+      "variable": 3,
+      "invigilator": "CB2",
+      "shift": "Morning"
+    },
+    {
+      "variable": 4,
+      "invigilator": "CB2",
+      "shift": "Afternoon"
+    },
+    {
+      "variable": 5,
+      "invigilator": "CB3",
+      "shift": "Morning"
+    },
+    {
+      "variable": 6,
+      "invigilator": "CB3",
+      "shift": "Afternoon"
+    }
+  ],
+  "clauses": [
+    {
+      "name": "c0001__availability",
+      "kind": "availability",
+      "description": "Busy(CB1, Morning) -> not Assign(CB1, Morning)",
+      "literals": [
+        -1
+      ]
+    },
+    {
+      "name": "c0002__at_least",
+      "kind": "at_least",
+      "description": "capacity(Morning): at least 2",
+      "literals": [
+        1,
+        3
+      ]
+    },
+    {
+      "name": "c0003__at_least",
+      "kind": "at_least",
+      "description": "capacity(Morning): at least 2",
+      "literals": [
+        1,
+        5
+      ]
+    },
+    {
+      "name": "c0004__at_least",
+      "kind": "at_least",
+      "description": "capacity(Morning): at least 2",
+      "literals": [
+        3,
+        5
+      ]
+    },
+    {
+      "name": "c0005__at_most",
+      "kind": "at_most",
+      "description": "capacity(Morning): at most 2",
+      "literals": [
+        -1,
+        -3,
+        -5
+      ]
+    },
+    {
+      "name": "c0006__at_least",
+      "kind": "at_least",
+      "description": "capacity(Afternoon): at least 2",
+      "literals": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "c0007__at_least",
+      "kind": "at_least",
+      "description": "capacity(Afternoon): at least 2",
+      "literals": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "c0008__at_least",
+      "kind": "at_least",
+      "description": "capacity(Afternoon): at least 2",
+      "literals": [
+        4,
+        6
+      ]
+    },
+    {
+      "name": "c0009__at_most",
+      "kind": "at_most",
+      "description": "capacity(Afternoon): at most 2",
+      "literals": [
+        -2,
+        -4,
+        -6
+      ]
+    }
+  ],
+  "statistics": {
+    "variable_count": 6,
+    "clause_count": 9,
+    "clauses_by_kind": {
+      "at_least": 6,
+      "at_most": 2,
+      "availability": 1
+    },
+    "cardinality_encoding": "naive combinatorial subsets"
+  },
+  "metadata": {}
+}
