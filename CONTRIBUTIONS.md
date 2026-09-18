@@ -31,5 +31,12 @@
 - Tested two toy and two real-data instances, producing 2 SAT, 2 UNSAT,
   and 0 UNKNOWN results.
 
+### 2353150 Vo Duy Thong - W02-T1
+- Complete the sets $I$, $J$, $C$ and all necessary parameters.
+- Write all hard regulations, including No double-booking, Capacity and Availability in first-order formula.  
+- Verify the domain of each variable and quantifier.  
+- Provide natural language explanations for every formula.  
+- Implement a validator (predicate_validator.py) to detect basic formal/syntactic errors.
+
 | Member (StudentID Name) | Contribution % | Signature |
 |---|---|---|
