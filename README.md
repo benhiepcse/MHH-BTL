@@ -32,9 +32,18 @@ Declare any AI-tool use in this README. Full rules, rubric (Appendix B), and the
 2453210 Phan Thế Thông used OpenAI Codex as an AI assistant while implementing
 W02–T3 / Requirement 1.2. Assistance covered drafting and reviewing the CNF
 encoder, verifier, and local test commands for the toy and real data slices.
+
+2452347 Le Vo Nghia Hiep used OpenAI ChatGPT as an AI assistant while
+implementing W02-T4 / Requirement 1.2. Assistance covered reviewing and
+debugging the SAT/SMT solver and minimal UNSAT-core verifier, suggesting
+additional validation steps and improvements, troubleshooting execution and
+Git commands, verifying the generated results, and drafting the related
+documentation. The implementation was authored, reviewed, tested, and
+integrated by the student, who remains responsible for understanding and
+explaining the submitted work.
+
 #### Cardinality / Counting Rules (Req 1.3)
 - **Exact Capacity Constraint**: Shift $j$ requires exactly $k$ invigilators.
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
   - **In CNF**: Requires breaking into *At-least-k* and *At-most-k*. The naive binomial encoding for *At-most-k* generates $\binom{n}{k+1}$ clauses, leading to clause explosion on large instances.
 - **At-most-k Constraint**: $\sum_{i} x_{ij} \le k$.
-
