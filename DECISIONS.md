@@ -2,6 +2,63 @@
 Record, per module, WHY you chose each objective, constraint, DFA, and dynamical direction, and what you rejected.
 
 
+## Module 1 — W02-T2 Toy Instance and Real-Data Slices
+
+**Requirement:** 1.2
+**Decision owner:** 2453196 Nguyen Ngoc Thien
+
+### Separate toy instance from real data slices
+
+I implemented `toy_instance.py` as an independent script strictly reproducing
+the smallest instance described in the Assignment Brief (CB1, CB2, CB3 across
+Morning and Afternoon shifts).
+
+I rejected embedding the toy instance directly into the Excel extraction
+pipeline because the toy instance serves as a zero-dependency ground-truth
+baseline for unit-testing the CNF encoder and SAT solver before touching the
+full dataset.
+
+### Filter moderate-capacity shifts for the logic slice
+
+In `prepare_logic_data.py`, I filtered candidates to shifts requiring 1 to 5
+invigilators before sampling.
+
+I chose this range because Module 1 encodes exact capacity into CNF using
+binomial expansion (O(n^(k+1)) clauses). Real shifts with 15–32 invigilators
+would cause combinatorial clause explosion, making SAT solving impractical.
+I rejected including large shifts in Module 1, deferring them to Module 2 where
+ILP handles cardinality in a single linear equality.
+
+### Parse Excel via standard library instead of third-party libraries
+
+I implemented the Excel reader using Python's built-in `zipfile` and
+`xml.etree.ElementTree` modules rather than requiring `pandas` or `openpyxl`.
+
+I chose this to make data preparation completely lightweight and self-contained,
+guaranteeing that `prepare_logic_data.py` executes out-of-the-box on any clean
+environment without dependency mismatches.
+
+### Enforce 100% reproducibility via the team seed
+
+I isolated all random choices (shift selection and non-assigned busy staff
+assignment) inside `random.Random(seed)` initialized with the team seed
+(`287892112`).
+
+I rejected non-deterministic selection or manual cherry-picking because the
+course grading relies on clean reproduction from `data/seed.txt`.
+
+### Engineer UNSAT via systematic capacity-availability starvation
+
+For the UNSAT slice (`m1_unsat_slice.json`), I selected target shift
+`20260601_1` (capacity = 1) and marked all available invigilators in the slice
+as busy during that shift, leaving 0 available staff for a shift needing 1.
+
+I chose this explicit starvation mechanism because it creates a minimal,
+mathematically undeniable conflict between exact capacity and availability
+constraints. I rejected arbitrary data corruptions without clear rationale
+because they obscure the minimal UNSAT core verification needed in W02-T4.
+
+
 ## Module 1 — W02-T4 SAT Solver and Minimal UNSAT Core
 
 **Requirement:** 1.2

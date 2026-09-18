@@ -3,9 +3,20 @@
 | Requirement | Primary owner (StudentID) | Reviewers |
 |---|---|---|
 | 1.1 | | |
+| 1.2 — W02-T2 Toy instance and real data slices | 2453196 Nguyen Ngoc Thien | 2452347 Le Vo Nghia Hiep |
 | 1.2 — W02-T4 SAT solver and minimal UNSAT core | 2452347 Le Vo Nghia Hiep | TBD |
 
 ## Detailed Contribution Ledger
+
+### 2453196 Nguyen Ngoc Thien — W02-T2
+
+- Implemented `m1_logic/toy_instance.py` representing the smallest instance from the assignment brief with both SAT and UNSAT variants.
+- Implemented `m1_logic/prepare_logic_data.py` to extract small, deterministic data slices from the Faculty Excel dataset.
+- Used Python standard library (`zipfile`, `xml.etree.ElementTree`) to parse Excel data without external dependencies.
+- Designed deterministic shift and invigilator sampling seeded by the team seed (`287892112`).
+- Generated historically feasible SAT slice `data/generated/m1_sat_slice.json` preserving actual assignments.
+- Generated controlled UNSAT slice `data/generated/m1_unsat_slice.json` with documented conflict rationale.
+- Verified JSON schema compatibility with downstream CNF encoding (W02-T3) and SAT solver (W02-T4).
 
 ### 2452347 Le Vo Nghia Hiep — W02-T4
 
