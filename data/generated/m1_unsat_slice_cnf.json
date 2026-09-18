@@ -1,0 +1,5265 @@
+{
+  "schema_version": "1.0",
+  "instance_name": "excel_slice_unsat_seed_287892112__cnf",
+  "source_instance": "excel_slice_unsat_seed_287892112",
+  "format": "cnf",
+  "variables": {
+    "Assign(CB001,20260601_1)": 1,
+    "Assign(CB001,20260602_5)": 2,
+    "Assign(CB001,20260608_1)": 3,
+    "Assign(CB001,20260613_1)": 4,
+    "Assign(CB002,20260601_1)": 5,
+    "Assign(CB002,20260602_5)": 6,
+    "Assign(CB002,20260608_1)": 7,
+    "Assign(CB002,20260613_1)": 8,
+    "Assign(CB003,20260601_1)": 9,
+    "Assign(CB003,20260602_5)": 10,
+    "Assign(CB003,20260608_1)": 11,
+    "Assign(CB003,20260613_1)": 12,
+    "Assign(CB005,20260601_1)": 13,
+    "Assign(CB005,20260602_5)": 14,
+    "Assign(CB005,20260608_1)": 15,
+    "Assign(CB005,20260613_1)": 16,
+    "Assign(CB006,20260601_1)": 17,
+    "Assign(CB006,20260602_5)": 18,
+    "Assign(CB006,20260608_1)": 19,
+    "Assign(CB006,20260613_1)": 20,
+    "Assign(CB028,20260601_1)": 21,
+    "Assign(CB028,20260602_5)": 22,
+    "Assign(CB028,20260608_1)": 23,
+    "Assign(CB028,20260613_1)": 24,
+    "Assign(CB063,20260601_1)": 25,
+    "Assign(CB063,20260602_5)": 26,
+    "Assign(CB063,20260608_1)": 27,
+    "Assign(CB063,20260613_1)": 28,
+    "Assign(CB064,20260601_1)": 29,
+    "Assign(CB064,20260602_5)": 30,
+    "Assign(CB064,20260608_1)": 31,
+    "Assign(CB064,20260613_1)": 32,
+    "Assign(CB066,20260601_1)": 33,
+    "Assign(CB066,20260602_5)": 34,
+    "Assign(CB066,20260608_1)": 35,
+    "Assign(CB066,20260613_1)": 36
+  },
+  "assignments": [
+    {
+      "variable": 1,
+      "invigilator": "CB001",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 2,
+      "invigilator": "CB001",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 3,
+      "invigilator": "CB001",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 4,
+      "invigilator": "CB001",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 5,
+      "invigilator": "CB002",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 6,
+      "invigilator": "CB002",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 7,
+      "invigilator": "CB002",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 8,
+      "invigilator": "CB002",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 9,
+      "invigilator": "CB003",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 10,
+      "invigilator": "CB003",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 11,
+      "invigilator": "CB003",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 12,
+      "invigilator": "CB003",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 13,
+      "invigilator": "CB005",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 14,
+      "invigilator": "CB005",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 15,
+      "invigilator": "CB005",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 16,
+      "invigilator": "CB005",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 17,
+      "invigilator": "CB006",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 18,
+      "invigilator": "CB006",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 19,
+      "invigilator": "CB006",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 20,
+      "invigilator": "CB006",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 21,
+      "invigilator": "CB028",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 22,
+      "invigilator": "CB028",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 23,
+      "invigilator": "CB028",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 24,
+      "invigilator": "CB028",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 25,
+      "invigilator": "CB063",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 26,
+      "invigilator": "CB063",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 27,
+      "invigilator": "CB063",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 28,
+      "invigilator": "CB063",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 29,
+      "invigilator": "CB064",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 30,
+      "invigilator": "CB064",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 31,
+      "invigilator": "CB064",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 32,
+      "invigilator": "CB064",
+      "shift": "20260613_1"
+    },
+    {
+      "variable": 33,
+      "invigilator": "CB066",
+      "shift": "20260601_1"
+    },
+    {
+      "variable": 34,
+      "invigilator": "CB066",
+      "shift": "20260602_5"
+    },
+    {
+      "variable": 35,
+      "invigilator": "CB066",
+      "shift": "20260608_1"
+    },
+    {
+      "variable": 36,
+      "invigilator": "CB066",
+      "shift": "20260613_1"
+    }
+  ],
+  "clauses": [
+    {
+      "name": "c0001__availability",
+      "kind": "availability",
+      "description": "Busy(CB001, 20260601_1) -> not Assign(CB001, 20260601_1)",
+      "literals": [
+        -1
+      ]
+    },
+    {
+      "name": "c0002__availability",
+      "kind": "availability",
+      "description": "Busy(CB002, 20260601_1) -> not Assign(CB002, 20260601_1)",
+      "literals": [
+        -5
+      ]
+    },
+    {
+      "name": "c0003__availability",
+      "kind": "availability",
+      "description": "Busy(CB003, 20260601_1) -> not Assign(CB003, 20260601_1)",
+      "literals": [
+        -9
+      ]
+    },
+    {
+      "name": "c0004__availability",
+      "kind": "availability",
+      "description": "Busy(CB005, 20260601_1) -> not Assign(CB005, 20260601_1)",
+      "literals": [
+        -13
+      ]
+    },
+    {
+      "name": "c0005__availability",
+      "kind": "availability",
+      "description": "Busy(CB006, 20260601_1) -> not Assign(CB006, 20260601_1)",
+      "literals": [
+        -17
+      ]
+    },
+    {
+      "name": "c0006__availability",
+      "kind": "availability",
+      "description": "Busy(CB028, 20260601_1) -> not Assign(CB028, 20260601_1)",
+      "literals": [
+        -21
+      ]
+    },
+    {
+      "name": "c0007__availability",
+      "kind": "availability",
+      "description": "Busy(CB028, 20260602_5) -> not Assign(CB028, 20260602_5)",
+      "literals": [
+        -22
+      ]
+    },
+    {
+      "name": "c0008__availability",
+      "kind": "availability",
+      "description": "Busy(CB028, 20260608_1) -> not Assign(CB028, 20260608_1)",
+      "literals": [
+        -23
+      ]
+    },
+    {
+      "name": "c0009__availability",
+      "kind": "availability",
+      "description": "Busy(CB028, 20260613_1) -> not Assign(CB028, 20260613_1)",
+      "literals": [
+        -24
+      ]
+    },
+    {
+      "name": "c0010__availability",
+      "kind": "availability",
+      "description": "Busy(CB063, 20260601_1) -> not Assign(CB063, 20260601_1)",
+      "literals": [
+        -25
+      ]
+    },
+    {
+      "name": "c0011__availability",
+      "kind": "availability",
+      "description": "Busy(CB063, 20260602_5) -> not Assign(CB063, 20260602_5)",
+      "literals": [
+        -26
+      ]
+    },
+    {
+      "name": "c0012__availability",
+      "kind": "availability",
+      "description": "Busy(CB063, 20260613_1) -> not Assign(CB063, 20260613_1)",
+      "literals": [
+        -28
+      ]
+    },
+    {
+      "name": "c0013__availability",
+      "kind": "availability",
+      "description": "Busy(CB064, 20260601_1) -> not Assign(CB064, 20260601_1)",
+      "literals": [
+        -29
+      ]
+    },
+    {
+      "name": "c0014__availability",
+      "kind": "availability",
+      "description": "Busy(CB064, 20260608_1) -> not Assign(CB064, 20260608_1)",
+      "literals": [
+        -31
+      ]
+    },
+    {
+      "name": "c0015__availability",
+      "kind": "availability",
+      "description": "Busy(CB066, 20260601_1) -> not Assign(CB066, 20260601_1)",
+      "literals": [
+        -33
+      ]
+    },
+    {
+      "name": "c0016__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260601_1): at least 1",
+      "literals": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33
+      ]
+    },
+    {
+      "name": "c0017__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -5
+      ]
+    },
+    {
+      "name": "c0018__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -9
+      ]
+    },
+    {
+      "name": "c0019__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -13
+      ]
+    },
+    {
+      "name": "c0020__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -17
+      ]
+    },
+    {
+      "name": "c0021__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -21
+      ]
+    },
+    {
+      "name": "c0022__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -25
+      ]
+    },
+    {
+      "name": "c0023__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -29
+      ]
+    },
+    {
+      "name": "c0024__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -1,
+        -33
+      ]
+    },
+    {
+      "name": "c0025__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -9
+      ]
+    },
+    {
+      "name": "c0026__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -13
+      ]
+    },
+    {
+      "name": "c0027__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -17
+      ]
+    },
+    {
+      "name": "c0028__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -21
+      ]
+    },
+    {
+      "name": "c0029__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -25
+      ]
+    },
+    {
+      "name": "c0030__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -29
+      ]
+    },
+    {
+      "name": "c0031__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -5,
+        -33
+      ]
+    },
+    {
+      "name": "c0032__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -13
+      ]
+    },
+    {
+      "name": "c0033__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -17
+      ]
+    },
+    {
+      "name": "c0034__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -21
+      ]
+    },
+    {
+      "name": "c0035__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -25
+      ]
+    },
+    {
+      "name": "c0036__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -29
+      ]
+    },
+    {
+      "name": "c0037__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -9,
+        -33
+      ]
+    },
+    {
+      "name": "c0038__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -13,
+        -17
+      ]
+    },
+    {
+      "name": "c0039__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -13,
+        -21
+      ]
+    },
+    {
+      "name": "c0040__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -13,
+        -25
+      ]
+    },
+    {
+      "name": "c0041__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -13,
+        -29
+      ]
+    },
+    {
+      "name": "c0042__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -13,
+        -33
+      ]
+    },
+    {
+      "name": "c0043__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -17,
+        -21
+      ]
+    },
+    {
+      "name": "c0044__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -17,
+        -25
+      ]
+    },
+    {
+      "name": "c0045__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -17,
+        -29
+      ]
+    },
+    {
+      "name": "c0046__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -17,
+        -33
+      ]
+    },
+    {
+      "name": "c0047__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -21,
+        -25
+      ]
+    },
+    {
+      "name": "c0048__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -21,
+        -29
+      ]
+    },
+    {
+      "name": "c0049__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -21,
+        -33
+      ]
+    },
+    {
+      "name": "c0050__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -25,
+        -29
+      ]
+    },
+    {
+      "name": "c0051__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -25,
+        -33
+      ]
+    },
+    {
+      "name": "c0052__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260601_1): at most 1",
+      "literals": [
+        -29,
+        -33
+      ]
+    },
+    {
+      "name": "c0053__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "name": "c0054__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        34
+      ]
+    },
+    {
+      "name": "c0055__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0056__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0057__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        14,
+        22,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0058__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        10,
+        18,
+        22,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0059__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        6,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0060__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        2,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0061__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260602_5): at least 2",
+      "literals": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34
+      ]
+    },
+    {
+      "name": "c0062__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -10
+      ]
+    },
+    {
+      "name": "c0063__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -14
+      ]
+    },
+    {
+      "name": "c0064__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -18
+      ]
+    },
+    {
+      "name": "c0065__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -22
+      ]
+    },
+    {
+      "name": "c0066__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -26
+      ]
+    },
+    {
+      "name": "c0067__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -30
+      ]
+    },
+    {
+      "name": "c0068__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -6,
+        -34
+      ]
+    },
+    {
+      "name": "c0069__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -14
+      ]
+    },
+    {
+      "name": "c0070__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -18
+      ]
+    },
+    {
+      "name": "c0071__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -22
+      ]
+    },
+    {
+      "name": "c0072__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -26
+      ]
+    },
+    {
+      "name": "c0073__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -30
+      ]
+    },
+    {
+      "name": "c0074__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -10,
+        -34
+      ]
+    },
+    {
+      "name": "c0075__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -14,
+        -18
+      ]
+    },
+    {
+      "name": "c0076__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -14,
+        -22
+      ]
+    },
+    {
+      "name": "c0077__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -14,
+        -26
+      ]
+    },
+    {
+      "name": "c0078__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -14,
+        -30
+      ]
+    },
+    {
+      "name": "c0079__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -14,
+        -34
+      ]
+    },
+    {
+      "name": "c0080__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -18,
+        -22
+      ]
+    },
+    {
+      "name": "c0081__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -18,
+        -26
+      ]
+    },
+    {
+      "name": "c0082__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -18,
+        -30
+      ]
+    },
+    {
+      "name": "c0083__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -18,
+        -34
+      ]
+    },
+    {
+      "name": "c0084__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -22,
+        -26
+      ]
+    },
+    {
+      "name": "c0085__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -22,
+        -30
+      ]
+    },
+    {
+      "name": "c0086__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -22,
+        -34
+      ]
+    },
+    {
+      "name": "c0087__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0088__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0089__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -2,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0090__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -14
+      ]
+    },
+    {
+      "name": "c0091__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -18
+      ]
+    },
+    {
+      "name": "c0092__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -22
+      ]
+    },
+    {
+      "name": "c0093__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -26
+      ]
+    },
+    {
+      "name": "c0094__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -30
+      ]
+    },
+    {
+      "name": "c0095__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -10,
+        -34
+      ]
+    },
+    {
+      "name": "c0096__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -14,
+        -18
+      ]
+    },
+    {
+      "name": "c0097__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -14,
+        -22
+      ]
+    },
+    {
+      "name": "c0098__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -14,
+        -26
+      ]
+    },
+    {
+      "name": "c0099__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -14,
+        -30
+      ]
+    },
+    {
+      "name": "c0100__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -14,
+        -34
+      ]
+    },
+    {
+      "name": "c0101__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -18,
+        -22
+      ]
+    },
+    {
+      "name": "c0102__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -18,
+        -26
+      ]
+    },
+    {
+      "name": "c0103__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -18,
+        -30
+      ]
+    },
+    {
+      "name": "c0104__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -18,
+        -34
+      ]
+    },
+    {
+      "name": "c0105__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -22,
+        -26
+      ]
+    },
+    {
+      "name": "c0106__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -22,
+        -30
+      ]
+    },
+    {
+      "name": "c0107__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -22,
+        -34
+      ]
+    },
+    {
+      "name": "c0108__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0109__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0110__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -6,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0111__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -14,
+        -18
+      ]
+    },
+    {
+      "name": "c0112__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -14,
+        -22
+      ]
+    },
+    {
+      "name": "c0113__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -14,
+        -26
+      ]
+    },
+    {
+      "name": "c0114__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -14,
+        -30
+      ]
+    },
+    {
+      "name": "c0115__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -14,
+        -34
+      ]
+    },
+    {
+      "name": "c0116__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -18,
+        -22
+      ]
+    },
+    {
+      "name": "c0117__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -18,
+        -26
+      ]
+    },
+    {
+      "name": "c0118__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -18,
+        -30
+      ]
+    },
+    {
+      "name": "c0119__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -18,
+        -34
+      ]
+    },
+    {
+      "name": "c0120__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -22,
+        -26
+      ]
+    },
+    {
+      "name": "c0121__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -22,
+        -30
+      ]
+    },
+    {
+      "name": "c0122__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -22,
+        -34
+      ]
+    },
+    {
+      "name": "c0123__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0124__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0125__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -10,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0126__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -18,
+        -22
+      ]
+    },
+    {
+      "name": "c0127__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -18,
+        -26
+      ]
+    },
+    {
+      "name": "c0128__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -18,
+        -30
+      ]
+    },
+    {
+      "name": "c0129__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -18,
+        -34
+      ]
+    },
+    {
+      "name": "c0130__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -22,
+        -26
+      ]
+    },
+    {
+      "name": "c0131__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -22,
+        -30
+      ]
+    },
+    {
+      "name": "c0132__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -22,
+        -34
+      ]
+    },
+    {
+      "name": "c0133__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0134__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0135__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -14,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0136__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -22,
+        -26
+      ]
+    },
+    {
+      "name": "c0137__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -22,
+        -30
+      ]
+    },
+    {
+      "name": "c0138__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -22,
+        -34
+      ]
+    },
+    {
+      "name": "c0139__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0140__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0141__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -18,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0142__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -22,
+        -26,
+        -30
+      ]
+    },
+    {
+      "name": "c0143__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -22,
+        -26,
+        -34
+      ]
+    },
+    {
+      "name": "c0144__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -22,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0145__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260602_5): at most 2",
+      "literals": [
+        -26,
+        -30,
+        -34
+      ]
+    },
+    {
+      "name": "c0146__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31
+      ]
+    },
+    {
+      "name": "c0147__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        35
+      ]
+    },
+    {
+      "name": "c0148__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0149__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0150__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        15,
+        23,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0151__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        11,
+        19,
+        23,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0152__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        7,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0153__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        3,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0154__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260608_1): at least 2",
+      "literals": [
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "name": "c0155__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -11
+      ]
+    },
+    {
+      "name": "c0156__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -15
+      ]
+    },
+    {
+      "name": "c0157__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -19
+      ]
+    },
+    {
+      "name": "c0158__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -23
+      ]
+    },
+    {
+      "name": "c0159__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -27
+      ]
+    },
+    {
+      "name": "c0160__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -31
+      ]
+    },
+    {
+      "name": "c0161__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -7,
+        -35
+      ]
+    },
+    {
+      "name": "c0162__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -15
+      ]
+    },
+    {
+      "name": "c0163__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -19
+      ]
+    },
+    {
+      "name": "c0164__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -23
+      ]
+    },
+    {
+      "name": "c0165__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -27
+      ]
+    },
+    {
+      "name": "c0166__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -31
+      ]
+    },
+    {
+      "name": "c0167__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -11,
+        -35
+      ]
+    },
+    {
+      "name": "c0168__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -15,
+        -19
+      ]
+    },
+    {
+      "name": "c0169__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -15,
+        -23
+      ]
+    },
+    {
+      "name": "c0170__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -15,
+        -27
+      ]
+    },
+    {
+      "name": "c0171__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -15,
+        -31
+      ]
+    },
+    {
+      "name": "c0172__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -15,
+        -35
+      ]
+    },
+    {
+      "name": "c0173__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -19,
+        -23
+      ]
+    },
+    {
+      "name": "c0174__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -19,
+        -27
+      ]
+    },
+    {
+      "name": "c0175__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -19,
+        -31
+      ]
+    },
+    {
+      "name": "c0176__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -19,
+        -35
+      ]
+    },
+    {
+      "name": "c0177__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -23,
+        -27
+      ]
+    },
+    {
+      "name": "c0178__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -23,
+        -31
+      ]
+    },
+    {
+      "name": "c0179__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -23,
+        -35
+      ]
+    },
+    {
+      "name": "c0180__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0181__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0182__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -3,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0183__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -15
+      ]
+    },
+    {
+      "name": "c0184__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -19
+      ]
+    },
+    {
+      "name": "c0185__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -23
+      ]
+    },
+    {
+      "name": "c0186__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -27
+      ]
+    },
+    {
+      "name": "c0187__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -31
+      ]
+    },
+    {
+      "name": "c0188__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -11,
+        -35
+      ]
+    },
+    {
+      "name": "c0189__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -15,
+        -19
+      ]
+    },
+    {
+      "name": "c0190__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -15,
+        -23
+      ]
+    },
+    {
+      "name": "c0191__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -15,
+        -27
+      ]
+    },
+    {
+      "name": "c0192__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -15,
+        -31
+      ]
+    },
+    {
+      "name": "c0193__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -15,
+        -35
+      ]
+    },
+    {
+      "name": "c0194__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -19,
+        -23
+      ]
+    },
+    {
+      "name": "c0195__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -19,
+        -27
+      ]
+    },
+    {
+      "name": "c0196__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -19,
+        -31
+      ]
+    },
+    {
+      "name": "c0197__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -19,
+        -35
+      ]
+    },
+    {
+      "name": "c0198__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -23,
+        -27
+      ]
+    },
+    {
+      "name": "c0199__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -23,
+        -31
+      ]
+    },
+    {
+      "name": "c0200__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -23,
+        -35
+      ]
+    },
+    {
+      "name": "c0201__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0202__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0203__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -7,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0204__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -15,
+        -19
+      ]
+    },
+    {
+      "name": "c0205__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -15,
+        -23
+      ]
+    },
+    {
+      "name": "c0206__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -15,
+        -27
+      ]
+    },
+    {
+      "name": "c0207__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -15,
+        -31
+      ]
+    },
+    {
+      "name": "c0208__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -15,
+        -35
+      ]
+    },
+    {
+      "name": "c0209__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -19,
+        -23
+      ]
+    },
+    {
+      "name": "c0210__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -19,
+        -27
+      ]
+    },
+    {
+      "name": "c0211__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -19,
+        -31
+      ]
+    },
+    {
+      "name": "c0212__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -19,
+        -35
+      ]
+    },
+    {
+      "name": "c0213__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -23,
+        -27
+      ]
+    },
+    {
+      "name": "c0214__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -23,
+        -31
+      ]
+    },
+    {
+      "name": "c0215__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -23,
+        -35
+      ]
+    },
+    {
+      "name": "c0216__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0217__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0218__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -11,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0219__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -19,
+        -23
+      ]
+    },
+    {
+      "name": "c0220__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -19,
+        -27
+      ]
+    },
+    {
+      "name": "c0221__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -19,
+        -31
+      ]
+    },
+    {
+      "name": "c0222__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -19,
+        -35
+      ]
+    },
+    {
+      "name": "c0223__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -23,
+        -27
+      ]
+    },
+    {
+      "name": "c0224__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -23,
+        -31
+      ]
+    },
+    {
+      "name": "c0225__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -23,
+        -35
+      ]
+    },
+    {
+      "name": "c0226__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0227__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0228__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -15,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0229__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -23,
+        -27
+      ]
+    },
+    {
+      "name": "c0230__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -23,
+        -31
+      ]
+    },
+    {
+      "name": "c0231__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -23,
+        -35
+      ]
+    },
+    {
+      "name": "c0232__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0233__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0234__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -19,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0235__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -23,
+        -27,
+        -31
+      ]
+    },
+    {
+      "name": "c0236__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -23,
+        -27,
+        -35
+      ]
+    },
+    {
+      "name": "c0237__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -23,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0238__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260608_1): at most 2",
+      "literals": [
+        -27,
+        -31,
+        -35
+      ]
+    },
+    {
+      "name": "c0239__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "name": "c0240__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        28
+      ]
+    },
+    {
+      "name": "c0241__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        32
+      ]
+    },
+    {
+      "name": "c0242__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        36
+      ]
+    },
+    {
+      "name": "c0243__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        28
+      ]
+    },
+    {
+      "name": "c0244__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        32
+      ]
+    },
+    {
+      "name": "c0245__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "c0246__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0247__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0248__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        16,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0249__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        24,
+        28
+      ]
+    },
+    {
+      "name": "c0250__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        24,
+        32
+      ]
+    },
+    {
+      "name": "c0251__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "c0252__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0253__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0254__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        20,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0255__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0256__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0257__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0258__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        12,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0259__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        24,
+        28
+      ]
+    },
+    {
+      "name": "c0260__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    {
+      "name": "c0261__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "c0262__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0263__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0264__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        20,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0265__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0266__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0267__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0268__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        16,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0269__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0270__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0271__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0272__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0273__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        8,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0274__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        24,
+        28
+      ]
+    },
+    {
+      "name": "c0275__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    {
+      "name": "c0276__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "c0277__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0278__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0279__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        20,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0280__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0281__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0282__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0283__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        16,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0284__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0285__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0286__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0287__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0288__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        12,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0289__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0290__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        16,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0291__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        16,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0292__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        16,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0293__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        16,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0294__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        4,
+        20,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0295__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ]
+    },
+    {
+      "name": "c0296__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    {
+      "name": "c0297__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "c0298__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0299__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0300__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        20,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0301__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0302__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0303__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0304__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        16,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0305__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0306__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0307__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0308__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0309__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        12,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0310__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0311__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        16,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0312__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        16,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0313__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        16,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0314__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        16,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0315__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        8,
+        20,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0316__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "name": "c0317__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        36
+      ]
+    },
+    {
+      "name": "c0318__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0319__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        16,
+        20,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0320__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        16,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0321__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        12,
+        20,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0322__at_least",
+      "kind": "at_least",
+      "description": "capacity(20260613_1): at least 4",
+      "literals": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        36
+      ]
+    },
+    {
+      "name": "c0323__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -16,
+        -20
+      ]
+    },
+    {
+      "name": "c0324__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -16,
+        -24
+      ]
+    },
+    {
+      "name": "c0325__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -16,
+        -28
+      ]
+    },
+    {
+      "name": "c0326__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -16,
+        -32
+      ]
+    },
+    {
+      "name": "c0327__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -16,
+        -36
+      ]
+    },
+    {
+      "name": "c0328__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -20,
+        -24
+      ]
+    },
+    {
+      "name": "c0329__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -20,
+        -28
+      ]
+    },
+    {
+      "name": "c0330__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -20,
+        -32
+      ]
+    },
+    {
+      "name": "c0331__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -20,
+        -36
+      ]
+    },
+    {
+      "name": "c0332__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0333__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0334__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0335__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0336__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0337__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -12,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0338__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -20,
+        -24
+      ]
+    },
+    {
+      "name": "c0339__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -20,
+        -28
+      ]
+    },
+    {
+      "name": "c0340__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -20,
+        -32
+      ]
+    },
+    {
+      "name": "c0341__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -20,
+        -36
+      ]
+    },
+    {
+      "name": "c0342__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0343__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0344__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0345__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0346__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0347__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -16,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0348__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0349__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0350__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0351__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0352__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0353__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0354__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0355__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0356__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0357__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -8,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0358__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -20,
+        -24
+      ]
+    },
+    {
+      "name": "c0359__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -20,
+        -28
+      ]
+    },
+    {
+      "name": "c0360__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -20,
+        -32
+      ]
+    },
+    {
+      "name": "c0361__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -20,
+        -36
+      ]
+    },
+    {
+      "name": "c0362__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0363__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0364__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0365__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0366__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0367__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -16,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0368__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0369__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0370__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0371__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0372__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0373__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0374__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0375__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0376__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0377__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -12,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0378__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0379__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0380__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0381__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0382__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0383__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0384__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0385__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0386__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0387__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -16,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0388__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -20,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0389__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -20,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0390__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -20,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0391__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -20,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0392__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -4,
+        -24,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0393__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -20,
+        -24
+      ]
+    },
+    {
+      "name": "c0394__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -20,
+        -28
+      ]
+    },
+    {
+      "name": "c0395__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -20,
+        -32
+      ]
+    },
+    {
+      "name": "c0396__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -20,
+        -36
+      ]
+    },
+    {
+      "name": "c0397__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0398__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0399__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0400__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0401__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0402__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -16,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0403__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0404__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0405__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0406__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0407__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0408__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0409__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0410__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0411__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0412__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -12,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0413__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0414__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0415__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0416__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0417__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0418__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0419__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0420__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0421__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0422__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -16,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0423__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -20,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0424__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -20,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0425__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -20,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0426__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -20,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0427__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -8,
+        -24,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0428__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -24,
+        -28
+      ]
+    },
+    {
+      "name": "c0429__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -24,
+        -32
+      ]
+    },
+    {
+      "name": "c0430__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -24,
+        -36
+      ]
+    },
+    {
+      "name": "c0431__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0432__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0433__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -20,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0434__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0435__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0436__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0437__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -16,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0438__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -20,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0439__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -20,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0440__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -20,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0441__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -20,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0442__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -12,
+        -24,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0443__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -16,
+        -20,
+        -24,
+        -28,
+        -32
+      ]
+    },
+    {
+      "name": "c0444__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -16,
+        -20,
+        -24,
+        -28,
+        -36
+      ]
+    },
+    {
+      "name": "c0445__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -16,
+        -20,
+        -24,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0446__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -16,
+        -20,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0447__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -16,
+        -24,
+        -28,
+        -32,
+        -36
+      ]
+    },
+    {
+      "name": "c0448__at_most",
+      "kind": "at_most",
+      "description": "capacity(20260613_1): at most 4",
+      "literals": [
+        -20,
+        -24,
+        -28,
+        -32,
+        -36
+      ]
+    }
+  ],
+  "statistics": {
+    "variable_count": 36,
+    "clause_count": 448,
+    "clauses_by_kind": {
+      "at_least": 103,
+      "at_most": 330,
+      "availability": 15
+    },
+    "cardinality_encoding": "naive combinatorial subsets"
+  },
+  "metadata": {
+    "seed": 287892112,
+    "source_file": "Dataset_Anonymized_Invigilator_Assignment_Problem.xlsx",
+    "selected_shifts": [
+      "20260601_1",
+      "20260602_5",
+      "20260608_1",
+      "20260613_1"
+    ],
+    "num_invigilators": 9,
+    "expected_status": "UNSAT",
+    "unsat_rationale": "Shift '20260601_1' requires capacity=1, but 7 additional invigilator(s) ['CB002', 'CB003', 'CB005', 'CB006', 'CB028', 'CB063', 'CB066'] were marked busy, leaving only 0 available staff member(s). This strictly violates the exact capacity requirement."
+  }
+}
