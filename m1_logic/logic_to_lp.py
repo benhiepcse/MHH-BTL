@@ -75,8 +75,26 @@ class LogicToLPBridge:
         return constraints
 
 if __name__ == "__main__":
+    import json
+    import os
+
     bridge = LogicToLPBridge()
+    constraints = bridge.generate_toy_lp_model()
+    
     print("=== Logic-to-LP Constraints for Toy Instance ===")
-    for c in bridge.generate_toy_lp_model():
+    for c in constraints:
         print(c)
-    print("\n[SUCCESS] logic_to_lp.py ran cleanly.")
+    
+    # Xuất ra file JSON đầu ra theo yêu cầu của nhóm
+    output_dir = "data/generated"
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, "logic_to_lp.json")
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump({
+            "module": "1.3",
+            "description": "Linear 0/1 constraints generated from logic bridge for toy instance",
+            "constraints": [c for c in constraints if not c.startswith("#") and c.strip()]
+        }, f, indent=2)
+        
+    print(f"\n[SUCCESS] Exported LP constraints to: {output_path}")

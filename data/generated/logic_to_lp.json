@@ -1,0 +1,10 @@
+{
+  "module": "1.3",
+  "description": "Linear 0/1 constraints generated from logic bridge for toy instance",
+  "constraints": [
+    "x_CB1_Morning = 0",
+    "\n# Shift Capacity Constraints (Exact = 2)",
+    "x_CB1_Morning + x_CB2_Morning + x_CB3_Morning = 2",
+    "x_CB1_Afternoon + x_CB2_Afternoon + x_CB3_Afternoon = 2"
+  ]
+}
