@@ -127,3 +127,20 @@ all_subset_minimal = true
 A **subset-minimal UNSAT core** is an UNSAT set of constraints for which
 removing any one constraint makes the remaining set SAT. It is not
 necessarily the smallest possible UNSAT core by number of constraints.
+
+# Module 1: Logic Specification & Propositional SAT
+
+Module 1 establishes the formal logic foundation for the Invigilator Assignment Problem.
+
+## Pipeline Structure
+- `predicate_validator.py`: Syntax check for FOL predicates.
+- `prepare_logic_data.py`: Generates SAT & UNSAT slices.
+- `verify_cnf.py`: Verifies CNF clause generation.
+- `sat_solver.py`: Solves SAT instances using Z3 / PySAT.
+- `verify_unsat_core.py`: Validates minimal UNSAT cores.
+- `logic_to_lp.py` & `logic_to_lp_table.md`: Bridges propositional logic to 0/1 Integer Linear Programming.
+
+## Execution
+Run via central pipeline:
+```bash
+python run_all.py --seed $(cat data/seed.txt) --stage m1

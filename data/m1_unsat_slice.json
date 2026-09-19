@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "instance_name": "excel_slice_unsat_seed_287892112",
+  "format": "iap",
+  "invigilators": [
+    "CB001",
+    "CB002",
+    "CB003",
+    "CB005",
+    "CB006",
+    "CB028",
+    "CB063",
+    "CB064",
+    "CB066"
+  ],
+  "shifts": [
+    {
+      "id": "20260601_1",
+      "capacity": 1
+    },
+    {
+      "id": "20260602_5",
+      "capacity": 2
+    },
+    {
+      "id": "20260608_1",
+      "capacity": 2
+    },
+    {
+      "id": "20260613_1",
+      "capacity": 4
+    }
+  ],
+  "busy": [
+    {
+      "invigilator": "CB001",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB002",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB003",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB005",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB006",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB028",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB028",
+      "shift": "20260602_5"
+    },
+    {
+      "invigilator": "CB028",
+      "shift": "20260608_1"
+    },
+    {
+      "invigilator": "CB028",
+      "shift": "20260613_1"
+    },
+    {
+      "invigilator": "CB063",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB063",
+      "shift": "20260602_5"
+    },
+    {
+      "invigilator": "CB063",
+      "shift": "20260613_1"
+    },
+    {
+      "invigilator": "CB064",
+      "shift": "20260601_1"
+    },
+    {
+      "invigilator": "CB064",
+      "shift": "20260608_1"
+    },
+    {
+      "invigilator": "CB066",
+      "shift": "20260601_1"
+    }
+  ],
+  "overlaps": [],
+  "eligibility": [],
+  "metadata": {
+    "seed": 287892112,
+    "source_file": "Dataset_Anonymized_Invigilator_Assignment_Problem.xlsx",
+    "selected_shifts": [
+      "20260601_1",
+      "20260602_5",
+      "20260608_1",
+      "20260613_1"
+    ],
+    "num_invigilators": 9,
+    "expected_status": "UNSAT",
+    "unsat_rationale": "Shift '20260601_1' requires capacity=1, but 7 additional invigilator(s) ['CB002', 'CB003', 'CB005', 'CB006', 'CB028', 'CB063', 'CB066'] were marked busy, leaving only 0 available staff member(s). This strictly violates the exact capacity requirement."
+  }
+}

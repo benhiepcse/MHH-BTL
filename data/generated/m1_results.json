@@ -1,12 +1,8 @@
 {
   "core_verification": {
     "all_subset_minimal": true,
-    "checked_count": 2,
+    "checked_count": 1,
     "checked_instances": [
-      {
-        "instance_name": "toy_instance_unsat__cnf",
-        "verified": true
-      },
       {
         "instance_name": "excel_slice_unsat_seed_287892112__cnf",
         "verified": true
@@ -36,9 +32,9 @@
       ],
       "format": "cnf",
       "instance_name": "toy_instance_sat__cnf",
-      "runtime_ms": 1.218,
+      "runtime_ms": 2.089,
       "source": "data/generated/toy_sat_cnf.json",
-      "source_sha256": "a9858f85beb5146a6e2823c5271cb476844d8ffde44ff9f9636e7e1f26671a23",
+      "source_sha256": "fef3b71e0af17d08208a2b5e60cb57b8d4c0a54a00743e2bec6cf8cf93f48ca9",
       "statistics": {
         "assignment_variables": 6,
         "constraints": 9,
@@ -52,133 +48,21 @@
       }
     },
     {
-      "assignment": null,
-      "format": "cnf",
-      "instance_name": "toy_instance_unsat__cnf",
-      "runtime_ms": 0.674,
-      "source": "data/generated/toy_unsat_cnf.json",
-      "source_sha256": "7141d07596a2b232f57eecf5fb9ae92afd2f2d9293ed19e2aff4c58cb5ba18e4",
-      "statistics": {
-        "assignment_variables": 6,
-        "constraints": 10,
-        "variables": 6
-      },
-      "status": "UNSAT",
-      "unsat_core": {
-        "final_size": 3,
-        "initial": [
-          "c0003__at_least",
-          "c0001__availability",
-          "c0002__availability"
-        ],
-        "initial_size": 3,
-        "is_subset_minimal": true,
-        "is_unsat": true,
-        "removal_checks": [
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0003__at_least",
-            "runtime_ms": 1.838
-          },
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0001__availability",
-            "runtime_ms": 0.782
-          },
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0002__availability",
-            "runtime_ms": 0.681
-          }
-        ],
-        "shrinking_checks": [
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0003__at_least",
-            "runtime_ms": 0.535
-          },
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0001__availability",
-            "runtime_ms": 0.773
-          },
-          {
-            "necessary": true,
-            "remaining_status": "SAT",
-            "removed_constraint": "c0002__availability",
-            "runtime_ms": 0.544
-          }
-        ],
-        "subset_minimal": [
-          "c0003__at_least",
-          "c0001__availability",
-          "c0002__availability"
-        ],
-        "verification": {
-          "core": [
-            "c0003__at_least",
-            "c0001__availability",
-            "c0002__availability"
-          ],
-          "core_size": 3,
-          "full_core_runtime_ms": 7.72,
-          "full_core_status": "UNSAT",
-          "is_subset_minimal": true,
-          "is_unsat": true,
-          "reason": null,
-          "removal_checks": [
-            {
-              "necessary": true,
-              "reason_unknown": null,
-              "remaining_status": "SAT",
-              "removed_constraint": "c0003__at_least",
-              "runtime_ms": 6.43
-            },
-            {
-              "necessary": true,
-              "reason_unknown": null,
-              "remaining_status": "SAT",
-              "removed_constraint": "c0001__availability",
-              "runtime_ms": 10.277
-            },
-            {
-              "necessary": true,
-              "reason_unknown": null,
-              "remaining_status": "SAT",
-              "removed_constraint": "c0002__availability",
-              "runtime_ms": 10.955
-            }
-          ],
-          "solver_name": "z3",
-          "solver_version": "4.13.0",
-          "timeout_ms": 30000,
-          "total_runtime_ms": 81.101
-        },
-        "verification_runtime_ms": 0.552
-      },
-      "validation": null
-    },
-    {
       "assignment": [
         {
-          "invigilator": "CB006",
+          "invigilator": "CB005",
           "shift": "20260601_1"
         },
         {
-          "invigilator": "CB003",
+          "invigilator": "CB001",
           "shift": "20260602_5"
         },
         {
-          "invigilator": "CB005",
+          "invigilator": "CB002",
           "shift": "20260602_5"
         },
         {
-          "invigilator": "CB003",
+          "invigilator": "CB001",
           "shift": "20260608_1"
         },
         {
@@ -204,9 +88,9 @@
       ],
       "format": "cnf",
       "instance_name": "excel_slice_sat_seed_287892112__cnf",
-      "runtime_ms": 1.953,
+      "runtime_ms": 4.736,
       "source": "data/generated/m1_sat_slice_cnf.json",
-      "source_sha256": "7eab5f762c6e9c776f72166acfd8e291aca2a5e4d7459160d70ae02c930f82df",
+      "source_sha256": "0aa82aff12debbead4ccff9829ca5fe28079430d7be7c0dc91e9077362981bb1",
       "statistics": {
         "assignment_variables": 36,
         "constraints": 441,
@@ -223,9 +107,9 @@
       "assignment": null,
       "format": "cnf",
       "instance_name": "excel_slice_unsat_seed_287892112__cnf",
-      "runtime_ms": 2.009,
+      "runtime_ms": 7.424,
       "source": "data/generated/m1_unsat_slice_cnf.json",
-      "source_sha256": "794186e1e9eec1a92be69e76c52a32d01b7109465a4d7031c10e0a30e0ae1c53",
+      "source_sha256": "5c52422af9c5bb44c97cb229fa21c2f38f03b050e1052074e4f11ad6269412e2",
       "statistics": {
         "assignment_variables": 36,
         "constraints": 448,
@@ -254,61 +138,61 @@
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0016__at_least",
-            "runtime_ms": 0.316
+            "runtime_ms": 0.583
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0015__availability",
-            "runtime_ms": 0.318
+            "runtime_ms": 0.474
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0013__availability",
-            "runtime_ms": 0.321
+            "runtime_ms": 0.492
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0010__availability",
-            "runtime_ms": 0.365
+            "runtime_ms": 0.642
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0006__availability",
-            "runtime_ms": 0.327
+            "runtime_ms": 0.933
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0005__availability",
-            "runtime_ms": 0.406
+            "runtime_ms": 0.837
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0004__availability",
-            "runtime_ms": 0.484
+            "runtime_ms": 0.445
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0003__availability",
-            "runtime_ms": 0.3
+            "runtime_ms": 0.558
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0002__availability",
-            "runtime_ms": 0.846
+            "runtime_ms": 0.438
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0001__availability",
-            "runtime_ms": 0.335
+            "runtime_ms": 0.396
           }
         ],
         "shrinking_checks": [
@@ -316,61 +200,61 @@
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0016__at_least",
-            "runtime_ms": 0.482
+            "runtime_ms": 0.89
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0015__availability",
-            "runtime_ms": 0.593
+            "runtime_ms": 0.751
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0013__availability",
-            "runtime_ms": 0.426
+            "runtime_ms": 0.728
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0010__availability",
-            "runtime_ms": 0.375
+            "runtime_ms": 0.773
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0006__availability",
-            "runtime_ms": 0.39
+            "runtime_ms": 0.779
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0005__availability",
-            "runtime_ms": 0.445
+            "runtime_ms": 0.781
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0004__availability",
-            "runtime_ms": 0.357
+            "runtime_ms": 0.535
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0003__availability",
-            "runtime_ms": 0.332
+            "runtime_ms": 0.487
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0002__availability",
-            "runtime_ms": 0.304
+            "runtime_ms": 0.505
           },
           {
             "necessary": true,
             "remaining_status": "SAT",
             "removed_constraint": "c0001__availability",
-            "runtime_ms": 0.374
+            "runtime_ms": 0.497
           }
         ],
         "subset_minimal": [
@@ -399,7 +283,7 @@
             "c0001__availability"
           ],
           "core_size": 10,
-          "full_core_runtime_ms": 6.165,
+          "full_core_runtime_ms": 1.555,
           "full_core_status": "UNSAT",
           "is_subset_minimal": true,
           "is_unsat": true,
@@ -410,78 +294,78 @@
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0016__at_least",
-              "runtime_ms": 6.309
+              "runtime_ms": 2.635
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0015__availability",
-              "runtime_ms": 3.994
+              "runtime_ms": 1.732
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0013__availability",
-              "runtime_ms": 4.589
+              "runtime_ms": 1.135
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0010__availability",
-              "runtime_ms": 4.708
+              "runtime_ms": 1.216
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0006__availability",
-              "runtime_ms": 3.823
+              "runtime_ms": 0.8
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0005__availability",
-              "runtime_ms": 3.984
+              "runtime_ms": 1.02
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0004__availability",
-              "runtime_ms": 4.003
+              "runtime_ms": 0.721
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0003__availability",
-              "runtime_ms": 5.639
+              "runtime_ms": 0.782
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0002__availability",
-              "runtime_ms": 8.393
+              "runtime_ms": 0.708
             },
             {
               "necessary": true,
               "reason_unknown": null,
               "remaining_status": "SAT",
               "removed_constraint": "c0001__availability",
-              "runtime_ms": 4.959
+              "runtime_ms": 0.601
             }
           ],
           "solver_name": "z3",
-          "solver_version": "4.13.0",
+          "solver_version": "5.1.0",
           "timeout_ms": 30000,
-          "total_runtime_ms": 116.658
+          "total_runtime_ms": 32.236
         },
-        "verification_runtime_ms": 0.38
+        "verification_runtime_ms": 0.75
       },
       "validation": null
     }
@@ -490,21 +374,21 @@
   "pipeline": "T2 IAP JSON -> T3 CNF JSON -> T4 SAT solver",
   "requirement": "1.2",
   "schema_version": "1.0",
-  "seed": 287892112,
+  "seed": null,
   "solver": {
     "name": "z3",
-    "version": "4.13.0"
+    "version": "5.1.0"
   },
   "summary": {
     "all_inputs_are_cnf": true,
     "all_runs_successful": true,
-    "instance_count": 4,
+    "instance_count": 3,
     "sat_instances": 2,
     "unknown_instances": 0,
-    "unsat_instances": 2,
+    "unsat_instances": 1,
     "verified_sat_models": 2,
-    "verified_subset_minimal_cores": 2
+    "verified_subset_minimal_cores": 1
   },
   "task": "W02-T4",
-  "team_id": "CO2011-261-CC-2353150"
+  "team_id": null
 }
