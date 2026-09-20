@@ -11,7 +11,7 @@
 - Progress: Triển khai và tích hợp Module 1 (Logic)
 - Per member:
   - 2026-09-17 — 2453210 Phan Thế Thông: Implemented `m1_logic/cnf_encoder.py` and `m1_logic/verify_cnf.py` for CNF encoding of `Assign(i,j)`, availability, no-double-booking, and exactly-k constraints; verified toy SAT/UNSAT clause counts and real data slices with Z3 (Req 1.2, W02-T3).
-  - 2453196 Nguyen Ngoc Thien: Triển khai Toy Instance (toy_instance.py) và trích xuất lát cắt dữ liệu thật từ Excel (prepare_logic_data.py) tạo ra m1_sat_slice.json và m1_unsat_slice.json tất định theo seed; xây dựng cơ chế tạo ca UNSAT có kiểm soát và tài liệu hóa (Req 1.2, W02-T2).
+  - 2453196 Nguyen Ngoc Thien: Implement Toy Instance (toy_instance.py) and extract real data slices from Excel (prepare_logic_data.py) to create deterministic m1_sat_slice.json and m1_unsat_slice.json based on the seed; build a mechanism for creating controlled and documented UNSAT cases (Req 1.2, W02-T2).
   - 2353150 Vo Duy Thong: Implement predicate_validator.py to check the syntactic errors of predicates.md (Req 1.1, W02-T1)
   - 2026-09-18 — 2452347 Le Vo Nghia Hiep: Completed W02-T4 for Requirement 1.2 by implementing the Z3 SAT/SMT execution pipeline, decoding and independently validating SAT assignments, extracting named UNSAT cores, minimizing them through deterministic deletion, and verifying subset-minimality using single-constraint removal checks. Generated and verified `data/generated/m1_results.json` on two toy and two real-data instances, obtaining 2 SAT, 2 UNSAT, and 0 UNKNOWN results.
 - 2452407 Pham Xuan Huy: Hoàn thành Logic-to-LP bridge (logic_to_lp.py), lập bảng logic_to_lp_table.md, m1_logic/README.md và tích hợp thành công toàn bộ pipeline Module 1 vào run_all.py (Req 1.3).
