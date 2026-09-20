@@ -91,3 +91,64 @@
 
 * Proposed date: 19/09/2026
 * Purpose: Review the five tasks and begin Module 1 integration.
+---
+
+## Meeting 02 — Week 02
+
+### General Information
+
+* Date: 20/09/2026
+* Purpose: Review Module 1 deliverables, verify integration pipeline, and plan for Module 2 (ILP).
+* Team ID: `CO2011-261-CC-2353150`
+
+### Attendance
+
+| Student ID | Full Name         | Attendance |
+| ---------: | ----------------- | ---------- |
+|    2353150 | Võ Duy Thông      | Present    |
+|    2453196 | Nguyễn Ngọc Thiện | Present    |
+|    2453210 | Phan Thế Thông    | Present    |
+|    2452347 | Lê Võ Nghĩa Hiệp  | Present    |
+|    2452407 | Phạm Xuân Huy     | Present    |
+
+### Topics Discussed
+
+* Evaluated first-order logic predicates and formal verification via `predicate_validator.py`.
+* Verified toy instance and real-data sampling slices (`m1_sat_slice.json`, `m1_unsat_slice.json`).
+* Verified CNF transformation correctness and execution of `verify_cnf.py`.
+* Evaluated SAT solver output (`m1_results.json`) and minimal UNSAT core validation via `verify_unsat_core.py`.
+* Validated Logic-to-LP bridge formulas and analysis table documenting combinatorial clause explosion versus linear constraints.
+* Verified seamless end-to-end execution of `python run_all.py --seed (Get-Content data/seed.txt) --stage m1`.
+* Discussed initial problem modeling and toolchains (`ortools`) for Module 2 (Integer Linear Programming).
+
+### Decisions
+
+1. Accepted all deliverables of Module 1 (W02-T1 through W02-T5) as fully verified and compliant with requirements.
+2. Formally tagged the repository with `week-02` and `m1` before the 23:59 deadline on 20/09/2026.
+3. Decided to adopt Google OR-Tools as the primary solver library for Module 2 (ILP).
+4. Agreed to partition the real exam dataset into balanced subsets for shift assignment testing.
+
+### Status of Week 02 Tasks
+
+| Task | Owner | Status | Output Files |
+| --- | --- | --- | --- |
+| W02-T1 — Predicate Specification | 2353150 Võ Duy Thông | Completed | `predicates.md`, `predicate_validator.py` |
+| W02-T2 — Toy Instance & Slices | 2453196 Nguyễn Ngọc Thiện | Completed | `toy_instance.py`, `prepare_logic_data.py`, slices |
+| W02-T3 — CNF Encoder | 2453210 Phan Thế Thông | Completed | `cnf_encoder.py`, `verify_cnf.py` |
+| W02-T4 — SAT Solver & UNSAT Core | 2452347 Lê Võ Nghĩa Hiệp | Completed | `sat_solver.py`, `verify_unsat_core.py`, `m1_results.json` |
+| W02-T5 — Logic-to-LP Bridge & Integration | 2452407 Phạm Xuân Huy | Completed | `logic_to_lp.py`, `logic_to_lp_table.md`, `README.md`, `run_all.py` |
+
+### Action Items for Week 03 (Module 2: Integer Linear Programming)
+
+| Action | Owner | Deadline | Status |
+| --- | --- | --- | --- |
+| Define decision variables and hard schedule constraints in ILP | Võ Duy Thông | 24/09/2026 | Planned |
+| Parse faculty exam data and construct parameter matrices | Nguyễn Ngọc Thiện | 24/09/2026 | Planned |
+| Formulate objective functions (fairness, penalty minimization) | Phan Thế Thông | 25/09/2026 | Planned |
+| Build OR-Tools solver script and baseline benchmark | Lê Võ Nghĩa Hiệp | 26/09/2026 | Planned |
+| Integrate M2 pipeline into `run_all.py` and write M2 test suites | Phạm Xuân Huy | 27/09/2026 | Planned |
+
+### Next Meeting
+
+* Proposed date: 27/09/2026
+* Purpose: Review Module 2 ILP models and solver results.
