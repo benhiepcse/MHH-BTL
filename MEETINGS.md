@@ -78,14 +78,14 @@
 
 ### Action Items
 
-| Action                                             | Owner             | Deadline   | Status      |
+| Action                                             | Owner             | Deadline   | Note      |
 | -------------------------------------------------- | ----------------- | ---------- | ----------- |
-| Complete the predicate specification               | Võ Duy Thông      | 18/09/2026 | In progress |
-| Create the toy instance and data slices            | Nguyễn Ngọc Thiện | 18/09/2026 | Not started |
-| Develop the CNF encoder                            | Phan Thế Thông    | 18/09/2026 | Not started |
-| Develop the SAT solver and verify the UNSAT core   | Lê Võ Nghĩa Hiệp  | 19/09/2026 | Not started |
-| Complete the logic-to-LP bridge and M1 integration | Phạm Xuân Huy     | 20/09/2026 | In progress |
-| Review and run the integrated tests                | All members       | 20/09/2026 | Not started |
+| Complete the predicate specification               | Võ Duy Thông      | 18/09/2026 |  |
+| Create the toy instance and data slices            | Nguyễn Ngọc Thiện | 18/09/2026 |  |
+| Develop the CNF encoder                            | Phan Thế Thông    | 18/09/2026 |  |
+| Develop the SAT solver and verify the UNSAT core   | Lê Võ Nghĩa Hiệp  | 19/09/2026 |  |
+| Complete the logic-to-LP bridge and M1 integration | Phạm Xuân Huy     | 20/09/2026 |  |
+| Review and run the integrated tests                | All members       | 20/09/2026 |  |
 
 ### Next Meeting
 
@@ -140,13 +140,13 @@
 
 ### Action Items for Week 03 (Module 2: Integer Linear Programming)
 
-| Action | Owner | Deadline | Status |
+| Action | Owner | Deadline | Note |
 | --- | --- | --- | --- |
-| Define decision variables and hard schedule constraints in ILP | Võ Duy Thông | 24/09/2026 | Planned |
-| Parse faculty exam data and construct parameter matrices | Nguyễn Ngọc Thiện | 24/09/2026 | Planned |
-| Formulate objective functions (fairness, penalty minimization) | Phan Thế Thông | 25/09/2026 | Planned |
+| Define decision variables and hard schedule constraints in ILP | Võ Duy Thông | 24/09/2026 |  |
+| Parse faculty exam data and construct parameter matrices | Nguyễn Ngọc Thiện | 24/09/2026 |  |
+| Formulate objective functions (fairness, penalty minimization) | Phan Thế Thông | 25/09/2026 |  |
 | Build OR-Tools solver script and baseline benchmark | Lê Võ Nghĩa Hiệp | 26/09/2026 | Planned |
-| Integrate M2 pipeline into `run_all.py` and write M2 test suites | Phạm Xuân Huy | 27/09/2026 | Planned |
+| Integrate M2 pipeline into `run_all.py` and write M2 test suites | Phạm Xuân Huy | 27/09/2026 |  |
 
 ### Next Meeting
 
