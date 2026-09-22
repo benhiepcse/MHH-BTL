@@ -29,6 +29,8 @@ Declare any AI-tool use in this README. Full rules, rubric (Appendix B), and the
 
 ## AI-use declaration
 
+### week 02
+
 2453210 Phan Thế Thông used OpenAI Codex as an AI assistant while implementing
 W02–T3 / Requirement 1.2. Assistance covered drafting and reviewing the CNF
 encoder, verifier, and local test commands for the toy and real data slices.
@@ -63,3 +65,13 @@ responsible for understanding and explaining the work.
   - **In LP**: Represented as a single linear equality $\sum_{i} x_{ij} = k$.
   - **In CNF**: Requires breaking into *At-least-k* and *At-most-k*. The naive binomial encoding for *At-most-k* generates $\binom{n}{k+1}$ clauses, leading to clause explosion on large instances.
 - **At-most-k Constraint**: $\sum_{i} x_{ij} \le k$.
+
+### week 03
+
+2353150 Vo Duy Thong used OpenAI ChatGPT as an AI assistant while implementing W03-T1 / Requirement 
+2.1. Assistance covered the clarification about schema analysis, help designing the structure of 
+m2_ilp/schema_analysis.py, identify the relevant columns in the anonymized dataset and map them 
+to the Module 2 concepts, clarify that each dataset row is an observed assignment record rather 
+than a separate ILP decision variable, explain how the binary decision variable $x_{ij}$ is 
+conceptually constructed from an invigilator (i) and a session (j). The implementation was authored,
+reviewed, tested, and integrated by the student, who remains responsible for understanding and explaining the work.
