@@ -54,7 +54,7 @@
 
 | Requirement | Primary owner (StudentID) | Reviewers |
 |---|---|---|
-|2.1 - W03-T1 Evaluate Schema Data | Vo Duy Thong | 
+|2.1 — W03-T1 Evaluate Schema Data | 2353150 Vo Duy Thong | 
 
 ## Detailed Contribution Ledger  
 ### 2353150 Vo Duy Thong  
