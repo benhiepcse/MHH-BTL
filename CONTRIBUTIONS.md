@@ -42,7 +42,7 @@
 - Formulated linear transformations for availability constraints ($x_{ij} = 0$), no-double-booking ($x_{ij} + x_{ik} \le 1$), and exact shift capacity ($\sum x_{ij} = k$).
 - Authored `m1_logic/logic_to_lp_table.md` documenting formal FOL-to-ILP bridge rules and proving the clause explosion dilemma in pure CNF ($\binom{n}{k+1}$ clauses) versus compact 0/1 LP formulations.
 - Authored `m1_logic/README.md` providing architectural overview and standalone execution guides for Module 1.
-- Integrated the entire Module 1 pipeline (validation, data prep, CNF verify, SAT solve, UNSAT core check, LP bridge) into central entry point `run_all.py` under `--stage m1`.
+- Integrated the entire Module 1 pipeline (validation, data prep, CNF verify, SAT solve, UNSAT core check, LP bridge) into central entry point `run_all.py` under `--stage m1`.  
 
 | Member (StudentID Name) | Contribution % | Signature |
 |---|---|---|
@@ -51,3 +51,13 @@
 | 2453210 Phan Van Thong | 20% | Signed |
 | 2452347 Le Vo Nghia Hiep | 20% | Signed |
 | 2452407 Pham Xuan Huy | 20% | Signed |
+
+| Requirement | Primary owner (StudentID) | Reviewers |
+|---|---|---|
+|2.1 - W03-T1 Evaluate Schema Data | Vo Duy Thong | 
+
+## Detailed Contribution Ledger  
+### 2353150 Vo Duy Thong  
+- Analyzed the anonymized dataset schema: verified 769 rows and 9 columns; identified invigilators, sessions, dates, start times, campuses, and task types.  
+- Checked missing values, duplicates, and data types; analyzed the meaning of the $\text{MS Ca thi}$ code.   
+- Prepared the schema-analysis implementation and outputs; connected session time information to the Req 1.3 no double-booking constraint.
