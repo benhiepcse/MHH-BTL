@@ -15,3 +15,7 @@
   - 2353150 Vo Duy Thong: Implement predicate_validator.py to check the syntactic errors of predicates.md (Req 1.1, W02-T1)
   - 2026-09-18 — 2452347 Le Vo Nghia Hiep: Completed W02-T4 for Requirement 1.2 by implementing the Z3 SAT/SMT execution pipeline, decoding and independently validating SAT assignments, extracting named UNSAT cores, minimizing them through deterministic deletion, and verifying subset-minimality using single-constraint removal checks. Generated and verified `data/generated/m1_results.json` on two toy and two real-data instances, obtaining 2 SAT, 2 UNSAT, and 0 UNKNOWN results.
 - 2452407 Pham Xuan Huy: Hoàn thành Logic-to-LP bridge (logic_to_lp.py), lập bảng logic_to_lp_table.md, m1_logic/README.md và tích hợp thành công toàn bộ pipeline Module 1 vào run_all.py (Req 1.3).
+## week-03 (21-27 Sep)
+- Progress: Triển khai và tích hợp Module 2 (Linear and Integer Programming)
+- Per member:
+    - 2026-09-22 - 2353150 Vo Duy Thong: Completed W03-T1 schema analysis for the anonymized invigilator assignment dataset. Verified that the dataset contains 769 rows and 9 columns. Identified the main sets and attributes required for Module 2: invigilators, exam sessions, dates, start times, campuses and task types. Checked missing values, duplicate rows, repeated assignment pairs, and data types. Analyzed the structure and meaning of the $\text{MS Ca thi}$ (exam session code). Prepared the schema-analysis results and connected the extracted session/time information to the Requirement 1.3 no double-booking formulation. (Req 2.1)   
