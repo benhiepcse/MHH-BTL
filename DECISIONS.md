@@ -123,3 +123,44 @@ minimality checks, seed, team ID, and summary counts.
 
 JSON was selected because it is machine-readable, deterministic, and suitable
 for later integration with the Module 1 runner and report.
+
+
+## Module 2 — W03-T1 Data Schema Analysis
+
+**Requirement:** 2.1  
+**Decision owner:** 2453210 Phan The Thong 
+
+### Strictly validate 769 rows and schema integrity
+
+I enforced a hard assertion that `m2_ilp/data_loader.py` must read exactly 769
+data rows and 9 columns. If the row count diverges, execution halts immediately
+with an informative exception.
+
+I chose this strict check because downstream ILP parameters (such as shift
+demands $c_j$ and invigilator loads $w_i$) depend on exact aggregation over the
+769 baseline assignments. Tolerating partial or extra rows would invisibly
+corrupt the baseline comparison.
+
+### Mathematically reconstruct missing values rather than dropping rows
+
+The dataset contains 28 missing values in both `Thứ` (Weekday) and `Cơ sở`
+(Campus) across rows 741–768.
+
+I rejected dropping these rows or filling them with arbitrary placeholders.
+Instead, I reconstructed `Cơ sở` from the prefix of the `Nhiệm vụ` column
+(`LTK_` -> `Cơ sở 1`, `DiAn_` -> `Cơ sở 2`) and reconstructed `Thứ` directly from
+the ISO calendar date in `Ngày`. This ensures 100% deterministic, sound data
+recovery without losing any of the 769 assignments.
+
+### Treat `MS Ca thi` as exam time slots rather than single exam rooms
+
+Through semantic analysis of `MS Ca thi`, I proved that the code pattern
+`YYYYMMDD_K` represents a synchronized campus-wide exam time slot. Each shift
+demands up to 35 invigilators across multiple examination rooms and can operate
+concurrently across both campuses (observed in 9 distinct sessions).
+
+I rejected modeling each row as an individual shift because multiple invigilators
+cooperate within the same `MS Ca thi`. In the ILP model, this establishes the
+demand equation $\sum_{i \in I} x_{ij} = c_j$, where $c_j$ is the aggregate
+capacity of session $j$.
+
