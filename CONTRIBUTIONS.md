@@ -54,11 +54,10 @@
 
 | Requirement | Primary owner (StudentID) | Reviewers |
 |---|---|---|
-| 2.1 — W03-T1 Evaluate Schema Data | 2453210 Phan The Thong | 
+|2.1 — W03-T1 Evaluate Schema Data | 2353150 Vo Duy Thong | 
 
 ## Detailed Contribution Ledger  
-### 2453210 Phan The Thong — W03-T1
+### 2353150 Vo Duy Thong  
 - Analyzed the anonymized dataset schema: verified 769 rows and 9 columns; identified invigilators, sessions, dates, start times, campuses, and task types.  
-- Checked missing values, duplicates, and data types; analyzed the structure and semantic meaning of the `MS Ca thi` code.
-- Implemented `m2_ilp/data_loader.py` providing robust data loading, schema validation, and missing value imputation.
-- Authored `m2_ilp/data_schema.md` detailing the schema report, core mathematical sets, baseline workload distribution, and implications for ILP formulation.
+- Checked missing values, duplicates, and data types; analyzed the meaning of the $\text{MS Ca thi}$ code.   
+- Prepared the schema-analysis implementation and outputs; connected session time information to the Req 1.3 no double-booking constraint.

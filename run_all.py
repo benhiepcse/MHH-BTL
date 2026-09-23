@@ -54,20 +54,6 @@ def run_m1(seed: int):
 
     print("\n>>> [SUCCESS] Entire Module 1 pipeline executed cleanly.\n")
 
-def run_m2(seed: int):
-    print("\n" + "=" * 60)
-    print("   RUNNING MODULE 2: LINEAR & INTEGER PROGRAMMING")
-    print(f"   Team Seed: {seed}")
-    print("=" * 60 + "\n")
-
-    python_bin = sys.executable
-
-    # 1. Data Schema Analysis & Loader (Req 2.1 - W03-T1)
-    print("[1/1] Loading Dataset & Analyzing Schema (Req 2.1, W03-T1)...")
-    subprocess.run([python_bin, "m2_ilp/data_loader.py"], check=True)
-
-    print("\n>>> [SUCCESS] Module 2 current tasks executed cleanly.\n")
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, required=True, help="from data/seed.txt")
@@ -82,7 +68,7 @@ def main():
         run_m1(a.seed)
 
     if a.stage in ("all", "m2"):
-        run_m2(a.seed)
+        pass  # TODO: m2_ilp
     if a.stage in ("all", "m3"):
         pass  # TODO: m3_automata
     if a.stage in ("all", "m4"):

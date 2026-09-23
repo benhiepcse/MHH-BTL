@@ -115,9 +115,6 @@ The script intentionally does not invent Busy(i,j), required capacity r(j), or a
 
 ## 9. Files generated
 
-- `schema_summary.json`
 - `session_schema.csv`
 - `assignment_pairs.csv`
-- `overlap_pairs.csv`
-- `logic_bridge_no_double_booking.txt`
 - `W03_T1_schema_report.md`
