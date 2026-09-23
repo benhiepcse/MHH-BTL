@@ -1,0 +1,607 @@
+{
+  "team_id": "CO2011-261-CC-2353150",
+  "seed": 287892112,
+  "soft_weights": [
+    1.28,
+    1.14,
+    1.57
+  ],
+  "weight_location_preference": 1.28,
+  "campuses": [
+    "Cơ sở 1",
+    "Cơ sở 2"
+  ],
+  "num_invigilators": 73,
+  "preferences": {
+    "CB001": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB002": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB003": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB004": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB005": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB006": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB007": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB008": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB009": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB010": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB011": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB012": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB013": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB014": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB015": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB016": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB017": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB018": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB019": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB020": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB021": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB022": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB023": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB024": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB025": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB026": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB027": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB028": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB029": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB030": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB031": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB032": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB033": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB034": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB035": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB036": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB037": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB038": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB039": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB040": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB041": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB042": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB043": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB044": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB045": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB046": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB047": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB048": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB049": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB050": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB051": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB052": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB053": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB054": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB055": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB056": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB057": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB058": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB059": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB060": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB061": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB062": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB063": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB064": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB065": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB066": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB067": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB068": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB069": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB070": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB071": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB072": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB073": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    }
+  },
+  "summary": {
+    "preferred_CS1_count": 29,
+    "preferred_CS2_count": 44,
+    "preferred_CS1_percentage": 39.73,
+    "preferred_CS2_percentage": 60.27
+  }
+}

@@ -1,0 +1,2444 @@
+{
+  "metadata": {
+    "module": "M2",
+    "requirement": "2.6",
+    "task": "W03-T2",
+    "team_id": "CO2011-261-CC-2353150",
+    "seed": 287892112,
+    "soft_weights": [
+      1.28,
+      1.14,
+      1.57
+    ],
+    "generated_at": "2026-09-23T16:05:59.259060"
+  },
+  "sets": {
+    "invigilators_I": [
+      "CB001",
+      "CB002",
+      "CB003",
+      "CB004",
+      "CB005",
+      "CB006",
+      "CB007",
+      "CB008",
+      "CB009",
+      "CB010",
+      "CB011",
+      "CB012",
+      "CB013",
+      "CB014",
+      "CB015",
+      "CB016",
+      "CB017",
+      "CB018",
+      "CB019",
+      "CB020",
+      "CB021",
+      "CB022",
+      "CB023",
+      "CB024",
+      "CB025",
+      "CB026",
+      "CB027",
+      "CB028",
+      "CB029",
+      "CB030",
+      "CB031",
+      "CB032",
+      "CB033",
+      "CB034",
+      "CB035",
+      "CB036",
+      "CB037",
+      "CB038",
+      "CB039",
+      "CB040",
+      "CB041",
+      "CB042",
+      "CB043",
+      "CB044",
+      "CB045",
+      "CB046",
+      "CB047",
+      "CB048",
+      "CB049",
+      "CB050",
+      "CB051",
+      "CB052",
+      "CB053",
+      "CB054",
+      "CB055",
+      "CB056",
+      "CB057",
+      "CB058",
+      "CB059",
+      "CB060",
+      "CB061",
+      "CB062",
+      "CB063",
+      "CB064",
+      "CB065",
+      "CB066",
+      "CB067",
+      "CB068",
+      "CB069",
+      "CB070",
+      "CB071",
+      "CB072",
+      "CB073"
+    ],
+    "invigilators_count": 73,
+    "sessions_J": [
+      "20260518_5",
+      "20260519_5",
+      "20260521_5",
+      "20260522_5",
+      "20260523_3",
+      "20260525_2",
+      "20260525_5",
+      "20260526_5",
+      "20260527_2",
+      "20260527_4",
+      "20260527_5",
+      "20260528_1",
+      "20260528_2",
+      "20260528_3",
+      "20260528_4",
+      "20260528_5",
+      "20260529_1",
+      "20260529_2",
+      "20260529_3",
+      "20260529_5",
+      "20260530_2",
+      "20260530_3",
+      "20260531_2",
+      "20260531_3",
+      "20260601_1",
+      "20260601_2",
+      "20260601_3",
+      "20260601_4",
+      "20260601_5",
+      "20260602_1",
+      "20260602_2",
+      "20260602_3",
+      "20260602_4",
+      "20260602_5",
+      "20260603_1",
+      "20260603_2",
+      "20260603_3",
+      "20260603_4",
+      "20260604_1",
+      "20260604_2",
+      "20260604_3",
+      "20260605_2",
+      "20260605_3",
+      "20260605_4",
+      "20260608_1",
+      "20260608_2",
+      "20260608_3",
+      "20260608_4",
+      "20260609_2",
+      "20260609_3",
+      "20260609_4",
+      "20260610_1",
+      "20260610_2",
+      "20260610_3",
+      "20260610_4",
+      "20260611_1",
+      "20260611_3",
+      "20260612_1",
+      "20260612_2",
+      "20260612_3",
+      "20260612_4",
+      "20260613_1",
+      "20260613_2",
+      "20260613_3",
+      "20260613_4"
+    ],
+    "sessions_count": 65,
+    "campuses_C": [
+      "Cơ sở 1",
+      "Cơ sở 2"
+    ],
+    "campuses_count": 2
+  },
+  "sessions": {
+    "20260518_5": {
+      "shift_id": "20260518_5",
+      "date": "2026-05-18",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 18/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB001",
+        "CB002"
+      ]
+    },
+    "20260519_5": {
+      "shift_id": "20260519_5",
+      "date": "2026-05-19",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 3, 19/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 3,
+      "assigned_staff": [
+        "CB003",
+        "CB004",
+        "CB005"
+      ]
+    },
+    "20260521_5": {
+      "shift_id": "20260521_5",
+      "date": "2026-05-21",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 5, 21/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB004",
+        "CB005"
+      ]
+    },
+    "20260522_5": {
+      "shift_id": "20260522_5",
+      "date": "2026-05-22",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 22/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB002",
+        "CB006"
+      ]
+    },
+    "20260523_3": {
+      "shift_id": "20260523_3",
+      "date": "2026-05-23",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 7, 23/05/2026, Ca 3: 13g00-15g30",
+      "capacity": 6,
+      "assigned_staff": [
+        "CB007",
+        "CB008",
+        "CB005",
+        "CB002",
+        "CB003",
+        "CB004"
+      ]
+    },
+    "20260525_2": {
+      "shift_id": "20260525_2",
+      "date": "2026-05-25",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 25/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 17,
+      "assigned_staff": [
+        "CB009",
+        "CB010",
+        "CB011",
+        "CB012",
+        "CB013",
+        "CB014",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB020",
+        "CB021",
+        "CB022",
+        "CB023",
+        "CB024",
+        "CB025"
+      ]
+    },
+    "20260525_5": {
+      "shift_id": "20260525_5",
+      "date": "2026-05-25",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 25/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 3,
+      "assigned_staff": [
+        "CB001",
+        "CB002",
+        "CB004"
+      ]
+    },
+    "20260526_5": {
+      "shift_id": "20260526_5",
+      "date": "2026-05-26",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 3, 26/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB003",
+        "CB005"
+      ]
+    },
+    "20260527_2": {
+      "shift_id": "20260527_2",
+      "date": "2026-05-27",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 27/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB025",
+        "CB026"
+      ]
+    },
+    "20260527_4": {
+      "shift_id": "20260527_4",
+      "date": "2026-05-27",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 4, 27/05/2026, Ca 4: 15g30-18g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB027"
+      ]
+    },
+    "20260527_5": {
+      "shift_id": "20260527_5",
+      "date": "2026-05-27",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 4, 27/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB003",
+        "CB004",
+        "CB002",
+        "CB028"
+      ]
+    },
+    "20260528_1": {
+      "shift_id": "20260528_1",
+      "date": "2026-05-28",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 5, 28/05/2026, Ca 1: 07g00-09g30",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB029"
+      ]
+    },
+    "20260528_2": {
+      "shift_id": "20260528_2",
+      "date": "2026-05-28",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 5, 28/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB029"
+      ]
+    },
+    "20260528_3": {
+      "shift_id": "20260528_3",
+      "date": "2026-05-28",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 28/05/2026, Ca 3: 13g00-15g30",
+      "capacity": 15,
+      "assigned_staff": [
+        "CB030",
+        "CB031",
+        "CB032",
+        "CB033",
+        "CB034",
+        "CB035",
+        "CB036",
+        "CB037",
+        "CB038",
+        "CB012",
+        "CB039",
+        "CB007",
+        "CB040",
+        "CB026",
+        "CB010"
+      ]
+    },
+    "20260528_4": {
+      "shift_id": "20260528_4",
+      "date": "2026-05-28",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 5, 28/05/2026, Ca 4: 15g30-18g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB010"
+      ]
+    },
+    "20260528_5": {
+      "shift_id": "20260528_5",
+      "date": "2026-05-28",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 5, 28/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 3,
+      "assigned_staff": [
+        "CB003",
+        "CB005",
+        "CB010"
+      ]
+    },
+    "20260529_1": {
+      "shift_id": "20260529_1",
+      "date": "2026-05-29",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 6, 29/05/2026, Ca 1: 07g00-09g30",
+      "capacity": 32,
+      "assigned_staff": [
+        "CB041",
+        "CB042",
+        "CB043",
+        "CB039",
+        "CB044",
+        "CB029",
+        "CB045",
+        "CB046",
+        "CB047",
+        "CB008",
+        "CB048",
+        "CB049",
+        "CB020",
+        "CB050",
+        "CB022",
+        "CB051",
+        "CB010",
+        "CB052",
+        "CB053",
+        "CB054",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB059",
+        "CB060",
+        "CB028",
+        "CB061",
+        "CB062",
+        "CB063",
+        "CB027"
+      ]
+    },
+    "20260529_2": {
+      "shift_id": "20260529_2",
+      "date": "2026-05-29",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 29/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB027"
+      ]
+    },
+    "20260529_3": {
+      "shift_id": "20260529_3",
+      "date": "2026-05-29",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 29/05/2026, Ca 3: 13g00-15g30",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB027"
+      ]
+    },
+    "20260529_5": {
+      "shift_id": "20260529_5",
+      "date": "2026-05-29",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 29/05/2026, Ca 5: 18g15-20g45",
+      "capacity": 3,
+      "assigned_staff": [
+        "CB004",
+        "CB003",
+        "CB064"
+      ]
+    },
+    "20260530_2": {
+      "shift_id": "20260530_2",
+      "date": "2026-05-30",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 7, 30/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB065",
+        "CB066",
+        "CB004",
+        "CB001"
+      ]
+    },
+    "20260530_3": {
+      "shift_id": "20260530_3",
+      "date": "2026-05-30",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 7, 30/05/2026, Ca 3: 13g00-15g30",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB065",
+        "CB066",
+        "CB004",
+        "CB001"
+      ]
+    },
+    "20260531_2": {
+      "shift_id": "20260531_2",
+      "date": "2026-05-31",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Chủ Nhật",
+      "campus": "Cơ sở 1",
+      "shift_description": "Chủ Nhật, 31/05/2026, Ca 2: 09g30-12g00",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB006",
+        "CB002",
+        "CB066",
+        "CB001"
+      ]
+    },
+    "20260531_3": {
+      "shift_id": "20260531_3",
+      "date": "2026-05-31",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Chủ Nhật",
+      "campus": "Cơ sở 1",
+      "shift_description": "Chủ Nhật, 31/05/2026, Ca 3: 13g00-15g30",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB006",
+        "CB002",
+        "CB066",
+        "CB001"
+      ]
+    },
+    "20260601_1": {
+      "shift_id": "20260601_1",
+      "date": "2026-06-01",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 01/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB028"
+      ]
+    },
+    "20260601_2": {
+      "shift_id": "20260601_2",
+      "date": "2026-06-01",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 01/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 32,
+      "assigned_staff": [
+        "CB041",
+        "CB032",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB048",
+        "CB049",
+        "CB020",
+        "CB050",
+        "CB018",
+        "CB051",
+        "CB016",
+        "CB052",
+        "CB053",
+        "CB044",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB059",
+        "CB060",
+        "CB068",
+        "CB061",
+        "CB062",
+        "CB010",
+        "CB006",
+        "CB065",
+        "CB019",
+        "CB043",
+        "CB039",
+        "CB028"
+      ]
+    },
+    "20260601_3": {
+      "shift_id": "20260601_3",
+      "date": "2026-06-01",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 01/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 28,
+      "assigned_staff": [
+        "CB067",
+        "CB008",
+        "CB048",
+        "CB044",
+        "CB041",
+        "CB050",
+        "CB018",
+        "CB051",
+        "CB032",
+        "CB052",
+        "CB053",
+        "CB039",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB059",
+        "CB060",
+        "CB046",
+        "CB061",
+        "CB062",
+        "CB068",
+        "CB006",
+        "CB065",
+        "CB019",
+        "CB043",
+        "CB029"
+      ]
+    },
+    "20260601_4": {
+      "shift_id": "20260601_4",
+      "date": "2026-06-01",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 01/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB029"
+      ]
+    },
+    "20260601_5": {
+      "shift_id": "20260601_5",
+      "date": "2026-06-01",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 01/06/2026, Ca 5: 18g15-20g45",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB005"
+      ]
+    },
+    "20260602_1": {
+      "shift_id": "20260602_1",
+      "date": "2026-06-02",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 02/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB027"
+      ]
+    },
+    "20260602_2": {
+      "shift_id": "20260602_2",
+      "date": "2026-06-02",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 02/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 32,
+      "assigned_staff": [
+        "CB011",
+        "CB012",
+        "CB013",
+        "CB047",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB044",
+        "CB021",
+        "CB025",
+        "CB069",
+        "CB040",
+        "CB023",
+        "CB024",
+        "CB026",
+        "CB030",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB035",
+        "CB036",
+        "CB037",
+        "CB038",
+        "CB068",
+        "CB070",
+        "CB051",
+        "CB071",
+        "CB042",
+        "CB027"
+      ]
+    },
+    "20260602_3": {
+      "shift_id": "20260602_3",
+      "date": "2026-06-02",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 02/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 32,
+      "assigned_staff": [
+        "CB067",
+        "CB012",
+        "CB013",
+        "CB047",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB044",
+        "CB021",
+        "CB025",
+        "CB069",
+        "CB040",
+        "CB023",
+        "CB024",
+        "CB026",
+        "CB030",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB035",
+        "CB036",
+        "CB037",
+        "CB038",
+        "CB068",
+        "CB070",
+        "CB051",
+        "CB071",
+        "CB042",
+        "CB011"
+      ]
+    },
+    "20260602_4": {
+      "shift_id": "20260602_4",
+      "date": "2026-06-02",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 02/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 15,
+      "assigned_staff": [
+        "CB040",
+        "CB023",
+        "CB030",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB035",
+        "CB036",
+        "CB037",
+        "CB038",
+        "CB070",
+        "CB069",
+        "CB042",
+        "CB011"
+      ]
+    },
+    "20260602_5": {
+      "shift_id": "20260602_5",
+      "date": "2026-06-02",
+      "start_time": "18:15",
+      "end_time": "20:45",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 3, 02/06/2026, Ca 5: 18g15-20g45",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB003",
+        "CB005"
+      ]
+    },
+    "20260603_1": {
+      "shift_id": "20260603_1",
+      "date": "2026-06-03",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 03/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 31,
+      "assigned_staff": [
+        "CB043",
+        "CB039",
+        "CB071",
+        "CB018",
+        "CB034",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB048",
+        "CB041",
+        "CB020",
+        "CB050",
+        "CB022",
+        "CB051",
+        "CB026",
+        "CB052",
+        "CB053",
+        "CB054",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB059",
+        "CB060",
+        "CB061",
+        "CB062",
+        "CB030",
+        "CB025",
+        "CB065",
+        "CB063"
+      ]
+    },
+    "20260603_2": {
+      "shift_id": "20260603_2",
+      "date": "2026-06-03",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 03/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 31,
+      "assigned_staff": [
+        "CB043",
+        "CB039",
+        "CB071",
+        "CB018",
+        "CB034",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB048",
+        "CB041",
+        "CB020",
+        "CB050",
+        "CB022",
+        "CB051",
+        "CB026",
+        "CB052",
+        "CB053",
+        "CB054",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB059",
+        "CB060",
+        "CB061",
+        "CB062",
+        "CB030",
+        "CB025",
+        "CB065",
+        "CB063"
+      ]
+    },
+    "20260603_3": {
+      "shift_id": "20260603_3",
+      "date": "2026-06-03",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 03/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 31,
+      "assigned_staff": [
+        "CB011",
+        "CB012",
+        "CB013",
+        "CB047",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB044",
+        "CB021",
+        "CB025",
+        "CB022",
+        "CB040",
+        "CB023",
+        "CB024",
+        "CB026",
+        "CB030",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB035",
+        "CB036",
+        "CB054",
+        "CB038",
+        "CB062",
+        "CB070",
+        "CB007",
+        "CB041",
+        "CB042"
+      ]
+    },
+    "20260603_4": {
+      "shift_id": "20260603_4",
+      "date": "2026-06-03",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 03/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 21,
+      "assigned_staff": [
+        "CB012",
+        "CB013",
+        "CB047",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB019",
+        "CB021",
+        "CB022",
+        "CB040",
+        "CB023",
+        "CB024",
+        "CB026",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB035",
+        "CB036",
+        "CB038",
+        "CB070",
+        "CB007"
+      ]
+    },
+    "20260604_1": {
+      "shift_id": "20260604_1",
+      "date": "2026-06-04",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 04/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 10,
+      "assigned_staff": [
+        "CB038",
+        "CB007",
+        "CB043",
+        "CB008",
+        "CB053",
+        "CB056",
+        "CB014",
+        "CB058",
+        "CB062",
+        "CB042"
+      ]
+    },
+    "20260604_2": {
+      "shift_id": "20260604_2",
+      "date": "2026-06-04",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 04/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 11,
+      "assigned_staff": [
+        "CB062",
+        "CB042",
+        "CB053",
+        "CB056",
+        "CB031",
+        "CB034",
+        "CB041",
+        "CB060",
+        "CB017",
+        "CB016",
+        "CB024"
+      ]
+    },
+    "20260604_3": {
+      "shift_id": "20260604_3",
+      "date": "2026-06-04",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 04/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB053",
+        "CB056"
+      ]
+    },
+    "20260605_2": {
+      "shift_id": "20260605_2",
+      "date": "2026-06-05",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 05/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 22,
+      "assigned_staff": [
+        "CB070",
+        "CB012",
+        "CB013",
+        "CB047",
+        "CB015",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB044",
+        "CB021",
+        "CB049",
+        "CB040",
+        "CB023",
+        "CB024",
+        "CB026",
+        "CB030",
+        "CB031",
+        "CB045",
+        "CB033",
+        "CB061",
+        "CB035"
+      ]
+    },
+    "20260605_3": {
+      "shift_id": "20260605_3",
+      "date": "2026-06-05",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 05/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 30,
+      "assigned_staff": [
+        "CB036",
+        "CB037",
+        "CB012",
+        "CB068",
+        "CB011",
+        "CB041",
+        "CB016",
+        "CB015",
+        "CB071",
+        "CB032",
+        "CB046",
+        "CB067",
+        "CB048",
+        "CB049",
+        "CB020",
+        "CB050",
+        "CB069",
+        "CB051",
+        "CB022",
+        "CB052",
+        "CB054",
+        "CB055",
+        "CB057",
+        "CB059",
+        "CB060",
+        "CB061",
+        "CB028",
+        "CB029",
+        "CB017",
+        "CB035"
+      ]
+    },
+    "20260605_4": {
+      "shift_id": "20260605_4",
+      "date": "2026-06-05",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 05/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 5,
+      "assigned_staff": [
+        "CB059",
+        "CB060",
+        "CB061",
+        "CB028",
+        "CB069"
+      ]
+    },
+    "20260608_2": {
+      "shift_id": "20260608_2",
+      "date": "2026-06-08",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 08/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 33,
+      "assigned_staff": [
+        "CB045",
+        "CB037",
+        "CB038",
+        "CB068",
+        "CB002",
+        "CB044",
+        "CB043",
+        "CB039",
+        "CB071",
+        "CB035",
+        "CB032",
+        "CB011",
+        "CB047",
+        "CB072",
+        "CB040",
+        "CB020",
+        "CB050",
+        "CB069",
+        "CB042",
+        "CB027",
+        "CB052",
+        "CB023",
+        "CB016",
+        "CB057",
+        "CB003",
+        "CB026",
+        "CB033",
+        "CB062",
+        "CB058",
+        "CB007",
+        "CB063",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260608_3": {
+      "shift_id": "20260608_3",
+      "date": "2026-06-08",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 08/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 33,
+      "assigned_staff": [
+        "CB045",
+        "CB037",
+        "CB038",
+        "CB068",
+        "CB064",
+        "CB044",
+        "CB043",
+        "CB039",
+        "CB071",
+        "CB035",
+        "CB032",
+        "CB011",
+        "CB047",
+        "CB072",
+        "CB040",
+        "CB020",
+        "CB050",
+        "CB069",
+        "CB042",
+        "CB027",
+        "CB052",
+        "CB023",
+        "CB055",
+        "CB057",
+        "CB059",
+        "CB026",
+        "CB033",
+        "CB062",
+        "CB058",
+        "CB007",
+        "CB063",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260608_4": {
+      "shift_id": "20260608_4",
+      "date": "2026-06-08",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 2, 08/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 7,
+      "assigned_staff": [
+        "CB058",
+        "CB007",
+        "CB059",
+        "CB056",
+        "CB063",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260609_2": {
+      "shift_id": "20260609_2",
+      "date": "2026-06-09",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 09/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 25,
+      "assigned_staff": [
+        "CB054",
+        "CB016",
+        "CB017",
+        "CB018",
+        "CB019",
+        "CB049",
+        "CB025",
+        "CB022",
+        "CB072",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB038",
+        "CB007",
+        "CB042",
+        "CB039",
+        "CB071",
+        "CB009",
+        "CB008",
+        "CB048",
+        "CB047",
+        "CB020",
+        "CB026",
+        "CB024",
+        "CB040"
+      ]
+    },
+    "20260609_3": {
+      "shift_id": "20260609_3",
+      "date": "2026-06-09",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 09/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 15,
+      "assigned_staff": [
+        "CB022",
+        "CB049",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB038",
+        "CB007",
+        "CB042",
+        "CB039",
+        "CB071",
+        "CB009",
+        "CB008",
+        "CB048",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260610_3": {
+      "shift_id": "20260610_3",
+      "date": "2026-06-10",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 10/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 35,
+      "assigned_staff": [
+        "CB049",
+        "CB046",
+        "CB009",
+        "CB013",
+        "CB073",
+        "CB054",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB058",
+        "CB037",
+        "CB062",
+        "CB016",
+        "CB060",
+        "CB041",
+        "CB023",
+        "CB044",
+        "CB043",
+        "CB021",
+        "CB053",
+        "CB072",
+        "CB050",
+        "CB069",
+        "CB038",
+        "CB028",
+        "CB042",
+        "CB025",
+        "CB030",
+        "CB055",
+        "CB059",
+        "CB006",
+        "CB065",
+        "CB005",
+        "CB032",
+        "CB063"
+      ]
+    },
+    "20260611_3": {
+      "shift_id": "20260611_3",
+      "date": "2026-06-11",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 11/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 31,
+      "assigned_staff": [
+        "CB049",
+        "CB020",
+        "CB069",
+        "CB051",
+        "CB048",
+        "CB054",
+        "CB056",
+        "CB014",
+        "CB057",
+        "CB071",
+        "CB059",
+        "CB062",
+        "CB047",
+        "CB039",
+        "CB017",
+        "CB032",
+        "CB019",
+        "CB044",
+        "CB025",
+        "CB022",
+        "CB040",
+        "CB012",
+        "CB030",
+        "CB045",
+        "CB033",
+        "CB034",
+        "CB009",
+        "CB007",
+        "CB041",
+        "CB026",
+        "CB068"
+      ]
+    },
+    "20260612_1": {
+      "shift_id": "20260612_1",
+      "date": "2026-06-12",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 12/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 32,
+      "assigned_staff": [
+        "CB011",
+        "CB012",
+        "CB013",
+        "CB015",
+        "CB021",
+        "CB022",
+        "CB072",
+        "CB024",
+        "CB031",
+        "CB059",
+        "CB036",
+        "CB037",
+        "CB068",
+        "CB070",
+        "CB009",
+        "CB042",
+        "CB049",
+        "CB010",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB050",
+        "CB069",
+        "CB019",
+        "CB053",
+        "CB055",
+        "CB056",
+        "CB047",
+        "CB014",
+        "CB054",
+        "CB063",
+        "CB006"
+      ]
+    },
+    "20260612_2": {
+      "shift_id": "20260612_2",
+      "date": "2026-06-12",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 12/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 6,
+      "assigned_staff": [
+        "CB032",
+        "CB069",
+        "CB028",
+        "CB029",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260612_3": {
+      "shift_id": "20260612_3",
+      "date": "2026-06-12",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 12/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 33,
+      "assigned_staff": [
+        "CB011",
+        "CB012",
+        "CB013",
+        "CB015",
+        "CB021",
+        "CB022",
+        "CB072",
+        "CB024",
+        "CB031",
+        "CB059",
+        "CB036",
+        "CB051",
+        "CB070",
+        "CB010",
+        "CB069",
+        "CB028",
+        "CB029",
+        "CB032",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB050",
+        "CB009",
+        "CB052",
+        "CB053",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB058",
+        "CB054",
+        "CB063",
+        "CB006",
+        "CB065"
+      ]
+    },
+    "20260612_4": {
+      "shift_id": "20260612_4",
+      "date": "2026-06-12",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 6",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 6, 12/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 22,
+      "assigned_staff": [
+        "CB013",
+        "CB036",
+        "CB051",
+        "CB070",
+        "CB010",
+        "CB031",
+        "CB028",
+        "CB029",
+        "CB032",
+        "CB046",
+        "CB067",
+        "CB008",
+        "CB050",
+        "CB009",
+        "CB052",
+        "CB053",
+        "CB055",
+        "CB056",
+        "CB014",
+        "CB058",
+        "CB054",
+        "CB063"
+      ]
+    },
+    "20260613_1": {
+      "shift_id": "20260613_1",
+      "date": "2026-06-13",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 1",
+      "shift_description": "Thứ 7, 13/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 4,
+      "assigned_staff": [
+        "CB002",
+        "CB066",
+        "CB001",
+        "CB064"
+      ]
+    },
+    "20260613_2": {
+      "shift_id": "20260613_2",
+      "date": "2026-06-13",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 7, 13/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 8,
+      "assigned_staff": [
+        "CB073",
+        "CB063",
+        "CB017",
+        "CB018",
+        "CB005",
+        "CB003",
+        "CB066",
+        "CB001"
+      ]
+    },
+    "20260613_3": {
+      "shift_id": "20260613_3",
+      "date": "2026-06-13",
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 7, 13/06/2026, Ca 3: 13g00-15g30",
+      "capacity": 10,
+      "assigned_staff": [
+        "CB073",
+        "CB063",
+        "CB020",
+        "CB018",
+        "CB005",
+        "CB003",
+        "CB002",
+        "CB066",
+        "CB001",
+        "CB034"
+      ]
+    },
+    "20260613_4": {
+      "shift_id": "20260613_4",
+      "date": "2026-06-13",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 7",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 7, 13/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 10,
+      "assigned_staff": [
+        "CB073",
+        "CB063",
+        "CB020",
+        "CB018",
+        "CB005",
+        "CB003",
+        "CB002",
+        "CB066",
+        "CB001",
+        "CB034"
+      ]
+    },
+    "20260608_1": {
+      "shift_id": "20260608_1",
+      "date": "2026-06-08",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 2",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 2, 08/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB063",
+        "CB006"
+      ]
+    },
+    "20260609_4": {
+      "shift_id": "20260609_4",
+      "date": "2026-06-09",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 3",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 3, 09/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB063"
+      ]
+    },
+    "20260610_1": {
+      "shift_id": "20260610_1",
+      "date": "2026-06-10",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 10/06/2026, Ca 1: 07g00-09g30",
+      "capacity": 2,
+      "assigned_staff": [
+        "CB063",
+        "CB006"
+      ]
+    },
+    "20260610_2": {
+      "shift_id": "20260610_2",
+      "date": "2026-06-10",
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 10/06/2026, Ca 2: 09g30-12g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB063"
+      ]
+    },
+    "20260610_4": {
+      "shift_id": "20260610_4",
+      "date": "2026-06-10",
+      "start_time": "15:30",
+      "end_time": "18:00",
+      "duration_minutes": 150,
+      "weekday": "Thứ 4",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 4, 10/06/2026, Ca 4: 15g30-18g00",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB063"
+      ]
+    },
+    "20260611_1": {
+      "shift_id": "20260611_1",
+      "date": "2026-06-11",
+      "start_time": "07:00",
+      "end_time": "09:30",
+      "duration_minutes": 150,
+      "weekday": "Thứ 5",
+      "campus": "Cơ sở 2",
+      "shift_description": "Thứ 5, 11/06/2026, Ca1 : 07g00-09g30",
+      "capacity": 1,
+      "assigned_staff": [
+        "CB063"
+      ]
+    }
+  },
+  "preferences": {
+    "CB001": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB002": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB003": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB004": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB005": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB006": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB007": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB008": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB009": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB010": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB011": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB012": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB013": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB014": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB015": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB016": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB017": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB018": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB019": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB020": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB021": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB022": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB023": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB024": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB025": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB026": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB027": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB028": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB029": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB030": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB031": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB032": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB033": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB034": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB035": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB036": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB037": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB038": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB039": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB040": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB041": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB042": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB043": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB044": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB045": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB046": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB047": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB048": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB049": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB050": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB051": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB052": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB053": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB054": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB055": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB056": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB057": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB058": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB059": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB060": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB061": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB062": {
+      "preferred_campus": "Cơ sở 1",
+      "affinity": {
+        "Cơ sở 1": 1,
+        "Cơ sở 2": 0
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB063": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB064": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB065": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB066": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB067": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB068": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB069": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB070": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB071": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB072": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    },
+    "CB073": {
+      "preferred_campus": "Cơ sở 2",
+      "affinity": {
+        "Cơ sở 1": 0,
+        "Cơ sở 2": 1
+      },
+      "disliked_penalty": 1.0
+    }
+  },
+  "preference_summary": {
+    "preferred_CS1_count": 29,
+    "preferred_CS2_count": 44,
+    "preferred_CS1_percentage": 39.73,
+    "preferred_CS2_percentage": 60.27
+  },
+  "baseline_evaluation": {
+    "total_baseline_assignments": 769,
+    "location_preference_violations": 415,
+    "location_preference_satisfactions": 354,
+    "satisfaction_rate_percentage": 46.03,
+    "location_penalty_weight": 1.28,
+    "total_baseline_location_penalty": 531.2,
+    "violation_samples": [
+      {
+        "invigilator_id": "CB001",
+        "shift_id": "20260518_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB002",
+        "shift_id": "20260518_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB003",
+        "shift_id": "20260519_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB005",
+        "shift_id": "20260519_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB005",
+        "shift_id": "20260521_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB002",
+        "shift_id": "20260522_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB006",
+        "shift_id": "20260522_5",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB005",
+        "shift_id": "20260523_3",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB002",
+        "shift_id": "20260523_3",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      },
+      {
+        "invigilator_id": "CB003",
+        "shift_id": "20260523_3",
+        "shift_campus": "Cơ sở 1",
+        "preferred_campus": "Cơ sở 2"
+      }
+    ]
+  }
+}
