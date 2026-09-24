@@ -75,3 +75,5 @@ to the Module 2 concepts, clarify that each dataset row is an observed assignmen
 than a separate ILP decision variable, explain how the binary decision variable $x_{ij}$ is 
 conceptually constructed from an invigilator (i) and a session (j). The implementation was authored,
 reviewed, tested, and integrated by the student, who remains responsible for understanding and explaining the work.
+
+2453210 Phan Thế Thông used Google Antigravity as an AI assistant while implementing W03-T3 / Requirement 2.1, 2.2. Assistance covered drafting the formal mathematical model specification for sets, parameters, and decision variables, structuring typed Python dataclasses, formulating the PuLP decision variable container, and validating model dimensionalities and bounds. All modeling decisions, specifications, and code were authored, verified, and integrated by the student, who remains responsible for understanding and defending the submitted work.
