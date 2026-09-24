@@ -1,0 +1,44 @@
+{
+  "status": "VALID",
+  "sets": {
+    "num_invigilators_|I|": 73,
+    "num_sessions_|J|": 65,
+    "num_campuses_|C|": 2
+  },
+  "variables": {
+    "x_ij": {
+      "count": 4745,
+      "expected": 4745,
+      "type": "binary",
+      "bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "w_i": {
+      "count": 73,
+      "expected": 73,
+      "type": "integer",
+      "bounds": [
+        0.0,
+        65.0
+      ]
+    },
+    "t": {
+      "count": 1,
+      "expected": 1,
+      "type": "continuous",
+      "bounds": [
+        11.0,
+        65.0
+      ]
+    },
+    "total_count": 4819,
+    "expected_total": 4819
+  },
+  "parameters_summary": {
+    "total_demand": 769,
+    "num_overlap_pairs": 0,
+    "weight_location": 1.28
+  }
+}
