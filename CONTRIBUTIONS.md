@@ -4,9 +4,9 @@
 |---|---|---|
 | 1.1 — W02-T1 Predicate Specification and Formal Verification | 2353150 Vo Duy Thong | 2452407 Pham Xuan Huy |
 | 1.2 — W02-T2 Toy instance and real data slices | 2453196 Nguyen Ngoc Thien | 2452347 Le Vo Nghia Hiep |
-| 1.2 — W02-T3 CNF Encoding | 2453210 Phan Van Thong | 2453196 Nguyen Ngoc Thien |
+| 1.2 — W02-T3 CNF Encoding | 2453210 Phan The Thong | 2453196 Nguyen Ngoc Thien |
 | 1.2 — W02-T4 SAT solver and minimal UNSAT core | 2452347 Le Vo Nghia Hiep | 2353150 Vo Duy Thong |
-| 1.3 — W02-T5 Logic-to-LP bridge & M1 Integration | 2452407 Pham Xuan Huy | 2453210 Phan Van Thong |
+| 1.3 — W02-T5 Logic-to-LP bridge & M1 Integration | 2452407 Pham Xuan Huy | 2453210 Phan The Thong |
 
 ## Detailed Contribution Ledger
 
@@ -18,6 +18,10 @@
 - Generated historically feasible SAT slice `data/generated/m1_sat_slice.json` preserving actual assignments.
 - Generated controlled UNSAT slice `data/generated/m1_unsat_slice.json` with documented conflict rationale.
 - Verified JSON schema compatibility with downstream CNF encoding (W02-T3) and SAT solver (W02-T4).
+
+### 2453210 Phan The Thong — W02-T3
+- Implemented `m1_logic/cnf_encoder.py` and `m1_logic/verify_cnf.py` for CNF encoding of `Assign(i,j)`, availability, no-double-booking, and exactly-k constraints.
+- Verified toy SAT/UNSAT clause counts and real data slices with Z3 (Req 1.2, W02-T3).
 
 ### 2452347 Le Vo Nghia Hiep — W02-T4
 - Implemented `m1_logic/sat_solver.py`.
@@ -48,16 +52,24 @@
 |---|---|---|
 | 2353150 Vo Duy Thong | 20% | Signed |
 | 2453196 Nguyen Ngoc Thien | 20% | Signed |
-| 2453210 Phan Van Thong | 20% | Signed |
+| 2453210 Phan The Thong | 20% | Signed |
 | 2452347 Le Vo Nghia Hiep | 20% | Signed |
 | 2452407 Pham Xuan Huy | 20% | Signed |
 
 | Requirement | Primary owner (StudentID) | Reviewers |
 |---|---|---|
-|2.1 — W03-T1 Evaluate Schema Data | 2353150 Vo Duy Thong | 
+| 2.1 — W03-T1 Evaluate Schema Data | 2353150 Vo Duy Thong | 
+| 2.1, 2.2 — W03-T3 Sets, Parameters and Decision Variables | 2453210 Phan The Thong | 2353150 Vo Duy Thong |
 
 ## Detailed Contribution Ledger  
 ### 2353150 Vo Duy Thong  
 - Analyzed the anonymized dataset schema: verified 769 rows and 9 columns; identified invigilators, sessions, dates, start times, campuses, and task types.  
 - Checked missing values, duplicates, and data types; analyzed the meaning of the $\text{MS Ca thi}$ code.   
 - Prepared the schema-analysis implementation and outputs; connected session time information to the Req 1.3 no double-booking constraint.
+
+### 2453210 Phan The Thong — W03-T3
+- Formally defined mathematical sets $I$ (73 invigilators), $J$ (65 sessions), $C$ (2 campuses).
+- Defined parameters: session demand $d_j$ (769 total slots), availability matrix $a_{ij}$, session overlap pairs $o_{jk}$, and campus/location preferences $p_{ij}$ (weight 1.28).
+- Formulated decision variables: binary assignment $x_{ij} \in \{0, 1\}$, integer invigilator workload $w_i \in \mathbb{Z}_{\ge 0}$, and minimax peak load variable $t \ge 0$.
+- Authored formal mathematical model specification in `m2_ilp/model_spec.md`.
+- Implemented typed variable factory, dimensionality and bound validation, and PuLP variable integration in `m2_ilp/variables.py`.
