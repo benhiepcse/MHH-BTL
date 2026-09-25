@@ -4,7 +4,7 @@
 **Học kỳ:** HK261  
 **Module:** Module 2 — Linear and Integer Programming (ILP)  
 **Nhiệm vụ (Task):** `W03-T3` — Sets, Parameters và Decision Variables  
-**Thành viên chịu trách nhiệm (TV3):** Phan Thế Thông (MSSV: 2453210)  
+**Thành viên chịu trách nhiệm:** Phan The Thong (MSSV: 2453210)  
 **Tập tin đặc tả:** `m2_ilp/model_spec.md`  
 **Mã nguồn triển khai:** `m2_ilp/variables.py`  
 
