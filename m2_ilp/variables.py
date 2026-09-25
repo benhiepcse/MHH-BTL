@@ -1,7 +1,7 @@
 """
 Module 2: Linear and Integer Programming (ILP)
 Task W03-T3: Sets, Parameters and Decision Variables Definition
-Author: 2453210 Phan The Thong (TV3)
+Author: 2453210 Phan The Thong
 
 This module defines:
   1. Sets: I (invigilators), J (exam sessions), C (campuses).
